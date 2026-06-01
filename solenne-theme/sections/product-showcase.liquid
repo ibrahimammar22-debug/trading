@@ -1,0 +1,240 @@
+<section class="product-showcase reveal-section" id="ProductShowcase">
+  <div class="product-showcase__inner">
+
+    <div class="product-showcase__media reveal-left">
+      {% if section.settings.product != blank %}
+        {% assign featured_product = all_products[section.settings.product] %}
+        {% if featured_product.featured_image %}
+          <div class="product-showcase__image-frame">
+            <img
+              src="{{ featured_product.featured_image | img_url: '900x' }}"
+              alt="{{ featured_product.featured_image.alt | escape | default: featured_product.title }}"
+              class="product-showcase__image"
+              loading="lazy"
+              width="{{ featured_product.featured_image.width }}"
+              height="{{ featured_product.featured_image.height }}"
+            >
+          </div>
+        {% else %}
+          <div class="product-showcase__image-frame">
+            {{ 'product-1' | placeholder_svg_tag: 'product-showcase__placeholder-svg' }}
+          </div>
+        {% endif %}
+      {% elsif section.settings.image %}
+        <div class="product-showcase__image-frame">
+          <img
+            src="{{ section.settings.image | img_url: '900x' }}"
+            alt="{{ section.settings.image.alt | escape | default: section.settings.product_name }}"
+            class="product-showcase__image"
+            loading="lazy"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+          >
+        </div>
+      {% else %}
+        <div class="product-showcase__image-frame">
+          {{ 'product-1' | placeholder_svg_tag: 'product-showcase__placeholder-svg' }}
+        </div>
+      {% endif %}
+
+      <div class="product-showcase__badge">
+        <span>{{ section.settings.badge_text | default: 'Handcrafted' }}</span>
+      </div>
+    </div>
+
+    <div class="product-showcase__details reveal-right">
+      {% if section.settings.label != blank %}
+        <p class="product-showcase__label">{{ section.settings.label }}</p>
+      {% endif %}
+
+      <h2 class="product-showcase__name">
+        {% if section.settings.product != blank %}
+          {{ all_products[section.settings.product].title }}
+        {% else %}
+          {{ section.settings.product_name | default: 'The Solenne I' }}
+        {% endif %}
+      </h2>
+
+      <div class="product-showcase__price">
+        {% if section.settings.product != blank %}
+          {% assign featured_product = all_products[section.settings.product] %}
+          <span class="product-showcase__price-amount">{{ featured_product.price | money }}</span>
+          {% if featured_product.compare_at_price > featured_product.price %}
+            <span class="product-showcase__price-compare">{{ featured_product.compare_at_price | money }}</span>
+          {% endif %}
+        {% else %}
+          <span class="product-showcase__price-amount">{{ section.settings.product_price | default: '$15,000' }}</span>
+        {% endif %}
+      </div>
+
+      <div class="product-showcase__description">
+        {% if section.settings.product != blank %}
+          <p>{{ all_products[section.settings.product].description | strip_html | truncatewords: 50 }}</p>
+        {% else %}
+          {{ section.settings.description | default: 'Engineered for those who demand excellence. The Solenne I merges aerospace-grade stainless steel with bespoke craftsmanship, delivering therapeutic cold immersion at the exact temperature your body requires.' }}
+        {% endif %}
+      </div>
+
+      <ul class="product-showcase__specs">
+        {% for block in section.blocks %}
+          {% if block.type == 'spec' %}
+            <li class="product-showcase__spec-item" {{ block.shopify_attributes }}>
+              <span class="product-showcase__spec-key">{{ block.settings.spec_key }}</span>
+              <span class="product-showcase__spec-value">{{ block.settings.spec_value }}</span>
+            </li>
+          {% endif %}
+        {% endfor %}
+        {% if section.blocks == blank %}
+          <li class="product-showcase__spec-item">
+            <span class="product-showcase__spec-key">Temperature Range</span>
+            <span class="product-showcase__spec-value">34°F – 60°F (1°C – 16°C)</span>
+          </li>
+          <li class="product-showcase__spec-item">
+            <span class="product-showcase__spec-key">Capacity</span>
+            <span class="product-showcase__spec-value">100 Gallons</span>
+          </li>
+          <li class="product-showcase__spec-item">
+            <span class="product-showcase__spec-key">Material</span>
+            <span class="product-showcase__spec-value">316L Marine-Grade Steel</span>
+          </li>
+          <li class="product-showcase__spec-item">
+            <span class="product-showcase__spec-key">Chiller</span>
+            <span class="product-showcase__spec-value">1HP Commercial Glycol Unit</span>
+          </li>
+        {% endif %}
+      </ul>
+
+      <div class="product-showcase__actions">
+        {% if section.settings.product != blank %}
+          {% assign featured_product = all_products[section.settings.product] %}
+          <form action="{{ routes.cart_add_url }}" method="post" enctype="multipart/form-data" class="product-form">
+            <input type="hidden" name="id" value="{{ featured_product.selected_or_first_available_variant.id }}">
+            <input type="hidden" name="quantity" value="1">
+            <button
+              type="submit"
+              class="btn btn--primary btn--full"
+              {% unless featured_product.selected_or_first_available_variant.available %}disabled{% endunless %}
+            >
+              {% if featured_product.selected_or_first_available_variant.available %}
+                {{ 'products.product.add_to_cart' | t }}
+              {% else %}
+                {{ 'products.product.sold_out' | t }}
+              {% endif %}
+            </button>
+          </form>
+        {% else %}
+          <a href="{{ section.settings.cta_url | default: '/products/the-solenne-i' }}" class="btn btn--primary btn--full">
+            {{ section.settings.cta_label | default: 'Add to Cart' }}
+          </a>
+        {% endif %}
+
+        <a href="{{ section.settings.learn_more_url | default: '/products/the-solenne-i' }}" class="product-showcase__learn-more">
+          {{ section.settings.learn_more_label | default: 'View full specifications' }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Showcase",
+  "tag": "section",
+  "class": "section-product-showcase",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Section label",
+      "default": "Flagship Collection"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product",
+      "info": "Select a product. If none selected, manual fields below will be used."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product image (if no product selected)"
+    },
+    {
+      "type": "text",
+      "id": "product_name",
+      "label": "Product name (manual)",
+      "default": "The Solenne I"
+    },
+    {
+      "type": "text",
+      "id": "product_price",
+      "label": "Product price (manual)",
+      "default": "$15,000"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Product description (manual)",
+      "default": "Engineered for those who demand excellence. The Solenne I merges aerospace-grade stainless steel with bespoke craftsmanship, delivering therapeutic cold immersion at the exact temperature your body requires."
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Image badge text",
+      "default": "Handcrafted"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA button label",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA button URL"
+    },
+    {
+      "type": "text",
+      "id": "learn_more_label",
+      "label": "Learn more link label",
+      "default": "View full specifications"
+    },
+    {
+      "type": "url",
+      "id": "learn_more_url",
+      "label": "Learn more link URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "spec",
+      "name": "Specification",
+      "settings": [
+        {
+          "type": "text",
+          "id": "spec_key",
+          "label": "Spec name",
+          "default": "Feature"
+        },
+        {
+          "type": "text",
+          "id": "spec_value",
+          "label": "Spec value",
+          "default": "Value"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Showcase"
+    }
+  ]
+}
+{% endschema %}

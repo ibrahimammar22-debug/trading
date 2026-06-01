@@ -1,0 +1,119 @@
+<section class="hero" id="hero">
+  <div class="hero__media">
+    {%- if section.settings.video_url != blank -%}
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="{%- if section.settings.hero_image != blank -%}{{ section.settings.hero_image | image_url: width: 2000 }}{%- endif -%}"
+        aria-hidden="true"
+      >
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    {%- elsif section.settings.hero_image != blank -%}
+      <img
+        class="hero__image"
+        src="{{ section.settings.hero_image | image_url: width: 2000 }}"
+        srcset="{{ section.settings.hero_image | image_url: width: 800 }} 800w,
+                {{ section.settings.hero_image | image_url: width: 1200 }} 1200w,
+                {{ section.settings.hero_image | image_url: width: 1800 }} 1800w,
+                {{ section.settings.hero_image | image_url: width: 2000 }} 2000w"
+        sizes="100vw"
+        alt="{{ section.settings.hero_image.alt | default: 'Solenne Cold Plunge' }}"
+        loading="eager"
+        fetchpriority="high"
+        width="2000"
+        height="1125"
+      >
+    {%- else -%}
+      <div class="hero__fallback"></div>
+    {%- endif -%}
+    <div class="hero__overlay"></div>
+  </div>
+
+  <div class="hero__content fade-in-up">
+    <p class="hero__eyebrow">{{ section.settings.eyebrow | default: 'Est. 2024' }}</p>
+    <h1 class="hero__headline">{{ section.settings.headline | default: 'Redefine Recovery' }}</h1>
+    <p class="hero__subhead">{{ section.settings.subhead | default: 'The world&rsquo;s finest cold plunge experience.' }}</p>
+    <div class="hero__cta-group">
+      <a href="{{ section.settings.cta_url | default: routes.collections_url }}" class="btn btn--primary">
+        {{ section.settings.cta_label | default: 'Shop Solenne' }}
+      </a>
+      <a href="{{ section.settings.secondary_cta_url | default: '/pages/experience' }}" class="btn btn--ghost">
+        {{ section.settings.secondary_cta_label | default: 'Discover the Experience' }}
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__scroll-indicator" aria-hidden="true">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-label">Scroll</span>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Background Video URL (MP4)"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow Text",
+      "default": "Est. 2024"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Redefine Recovery"
+    },
+    {
+      "type": "text",
+      "id": "subhead",
+      "label": "Subheadline",
+      "default": "The world's finest cold plunge experience."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Primary CTA Label",
+      "default": "Shop Solenne"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Primary CTA URL"
+    },
+    {
+      "type": "text",
+      "id": "secondary_cta_label",
+      "label": "Secondary CTA Label",
+      "default": "Discover the Experience"
+    },
+    {
+      "type": "url",
+      "id": "secondary_cta_url",
+      "label": "Secondary CTA URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

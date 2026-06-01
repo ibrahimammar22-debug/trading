@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>
+    {%- if page_title -%}
+      {{ page_title }} &mdash; {{ shop.name }}
+    {%- else -%}
+      {{ shop.name }} &mdash; {{ shop.description | default: 'Luxury Cold Plunge' }}
+    {%- endif -%}
+  </title>
+
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:site_name" content="{{ shop.name }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:title" content="{{ page_title | default: shop.name }}">
+  <meta property="og:type" content="website">
+  {%- if page_image -%}
+    <meta property="og:image" content="{{ page_image | image_url: width: 1200 }}">
+  {%- endif -%}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title | default: shop.name }}">
+  {%- if page_description -%}
+    <meta name="twitter:description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  {%- if settings.favicon -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+  {%- endif -%}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  {{ content_for_header }}
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+</head>
+
+<body class="template-{{ template | split: '.' | first | handle }}{%- if customer %} customer-logged-in{%- endif -%}">
+
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <a href="{{ routes.root_url }}" class="site-logo" aria-label="{{ shop.name }}">
+        {%- if settings.logo -%}
+          <img src="{{ settings.logo | image_url: width: 200 }}" alt="{{ shop.name }}" width="140" loading="eager">
+        {%- else -%}
+          <span class="site-logo__text">{{ shop.name | upcase }}</span>
+        {%- endif -%}
+      </a>
+
+      <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="{{ routes.root_url }}" class="site-nav__link">Home</a></li>
+          <li class="site-nav__item"><a href="{{ routes.collections_url }}" class="site-nav__link">Shop</a></li>
+          <li class="site-nav__item"><a href="/pages/about" class="site-nav__link">About</a></li>
+          <li class="site-nav__item"><a href="/pages/experience" class="site-nav__link">Experience</a></li>
+          <li class="site-nav__item"><a href="/pages/contact" class="site-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="{{ routes.search_url }}" class="header-icon" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </a>
+        <a href="{{ routes.account_url }}" class="header-icon" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+        <a href="{{ routes.cart_url }}" class="header-icon cart-icon" aria-label="Cart ({{ cart.item_count }} items)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          {%- if cart.item_count > 0 -%}
+            <span class="cart-count" aria-hidden="true">{{ cart.item_count }}</span>
+          {%- endif -%}
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main-content" role="main" tabindex="-1">
+    {{ content_for_layout }}
+  </main>
+
+  {% section 'footer' %}
+
+  {{ 'theme.js' | asset_url | script_tag }}
+</body>
+</html>
