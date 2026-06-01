@@ -1,0 +1,781 @@
+/* ============================================================
+   SOLENNE — Custom Brand Styles
+   Premium home wellness brand — calm, architectural, minimal
+   ============================================================ */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+/* --- Brand Tokens --- */
+:root {
+  --sol-ivory:       #F7F4EF;
+  --sol-charcoal:    #1C1C1A;
+  --sol-champagne:   #C9B99A;
+  --sol-warm-grey:   #E2DDD8;
+  --sol-mid-grey:    #8A8580;
+  --sol-dark-bg:     #141412;
+  --sol-cream:       #EDE9E2;
+
+  --sol-font-heading: 'Cormorant Garamond', Georgia, serif;
+  --sol-font-body:    'Inter', system-ui, sans-serif;
+
+  --sol-letter-wide:  0.08em;
+  --sol-letter-wider: 0.14em;
+
+  --sol-radius-sm:  2px;
+  --sol-radius-md:  4px;
+  --sol-transition: 0.3s ease;
+}
+
+/* --- Global Overrides --- */
+body {
+  background-color: var(--sol-ivory);
+  color: var(--sol-charcoal);
+  font-family: var(--sol-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--sol-font-heading);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* --- Header --- */
+.header-section,
+.header__wrapper {
+  background-color: var(--sol-ivory) !important;
+  border-bottom: 1px solid var(--sol-warm-grey) !important;
+}
+
+.header__logo,
+.header__heading-link {
+  font-family: var(--sol-font-heading);
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: var(--sol-letter-wider);
+  text-transform: uppercase;
+  color: var(--sol-charcoal) !important;
+}
+
+.header__menu-item a,
+.header__nav a {
+  font-family: var(--sol-font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+  color: var(--sol-charcoal) !important;
+  transition: color var(--sol-transition);
+}
+
+.header__menu-item a:hover,
+.header__nav a:hover {
+  color: var(--sol-champagne) !important;
+}
+
+/* --- Announcement Bar --- */
+.announcement-bar {
+  background-color: var(--sol-charcoal) !important;
+  color: var(--sol-ivory) !important;
+  font-family: var(--sol-font-body);
+  font-size: 0.7rem;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+}
+
+/* --- Buttons --- */
+.button,
+.btn,
+[class*="button--primary"],
+.product-form__submit {
+  font-family: var(--sol-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+  border-radius: var(--sol-radius-sm) !important;
+  transition: background-color var(--sol-transition), color var(--sol-transition), border-color var(--sol-transition);
+}
+
+/* Primary button — charcoal */
+.button--primary,
+.product-form__submit:not(.button--secondary) {
+  background-color: var(--sol-charcoal) !important;
+  color: var(--sol-ivory) !important;
+  border-color: var(--sol-charcoal) !important;
+}
+
+.button--primary:hover,
+.product-form__submit:not(.button--secondary):hover {
+  background-color: #2e2e2b !important;
+}
+
+/* Secondary / outline button */
+.button--secondary {
+  background-color: transparent !important;
+  color: var(--sol-charcoal) !important;
+  border: 1px solid var(--sol-charcoal) !important;
+}
+
+.button--secondary:hover {
+  background-color: var(--sol-charcoal) !important;
+  color: var(--sol-ivory) !important;
+}
+
+/* --- Product Card --- */
+.card-wrapper,
+.product-card {
+  background-color: var(--sol-cream);
+  border-radius: var(--sol-radius-md);
+  overflow: hidden;
+}
+
+.card__heading,
+.product-card__title {
+  font-family: var(--sol-font-heading);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* --- Section Backgrounds --- */
+.color-scheme-1,
+[class*="scheme-1"] {
+  background-color: var(--sol-ivory) !important;
+}
+
+.color-scheme-2,
+[class*="scheme-2"] {
+  background-color: var(--sol-cream) !important;
+}
+
+/* --- Dividers --- */
+hr,
+.divider {
+  border-color: var(--sol-warm-grey);
+}
+
+/* --- Footer --- */
+.footer,
+footer {
+  background-color: var(--sol-charcoal) !important;
+  color: var(--sol-ivory) !important;
+  border-top: none !important;
+}
+
+.footer a,
+footer a {
+  color: var(--sol-warm-grey) !important;
+  font-size: 0.75rem;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+  transition: color var(--sol-transition);
+}
+
+.footer a:hover,
+footer a:hover {
+  color: var(--sol-champagne) !important;
+}
+
+.footer__heading,
+footer h3,
+footer h4 {
+  font-family: var(--sol-font-heading);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: var(--sol-letter-wide);
+  color: var(--sol-ivory) !important;
+}
+
+/* --- Price --- */
+.price__current,
+.price-item--regular {
+  font-family: var(--sol-font-body);
+  font-weight: 400;
+  color: var(--sol-charcoal);
+}
+
+/* --- FAQ / Accordions --- */
+.accordion__title,
+details summary {
+  font-family: var(--sol-font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--sol-charcoal);
+  border-bottom: 1px solid var(--sol-warm-grey);
+  padding: 1.25rem 0;
+}
+
+details[open] summary {
+  color: var(--sol-charcoal);
+}
+
+.accordion__content,
+details .details__summary-content {
+  font-family: var(--sol-font-body);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--sol-mid-grey);
+  padding: 0.75rem 0 1.25rem;
+}
+
+/* --- Breadcrumbs --- */
+.breadcrumbs,
+nav[aria-label="Breadcrumb"] {
+  font-family: var(--sol-font-body);
+  font-size: 0.7rem;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+  color: var(--sol-mid-grey);
+}
+
+/* ============================================================
+   SOLENNE — Homepage Sections
+   ============================================================ */
+
+/* Trust bar */
+.solenne-trust-bar {
+  background-color: var(--sol-cream);
+  border-top: 1px solid var(--sol-warm-grey);
+  border-bottom: 1px solid var(--sol-warm-grey);
+  padding: 2rem 0;
+}
+
+.solenne-trust-bar__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.solenne-trust-bar__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--sol-font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+  color: var(--sol-charcoal);
+}
+
+.solenne-trust-bar__icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+
+/* Philosophy strip */
+.solenne-philosophy {
+  background-color: var(--sol-ivory);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.solenne-philosophy__label {
+  font-family: var(--sol-font-body);
+  font-size: 0.68rem;
+  letter-spacing: var(--sol-letter-wider);
+  text-transform: uppercase;
+  color: var(--sol-champagne);
+  margin-bottom: 1.5rem;
+}
+
+.solenne-philosophy__headline {
+  font-family: var(--sol-font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--sol-charcoal);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.solenne-philosophy__pillars {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.solenne-philosophy__pillar-name {
+  font-family: var(--sol-font-heading);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--sol-charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.solenne-philosophy__pillar-desc {
+  font-family: var(--sol-font-body);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--sol-mid-grey);
+  max-width: 200px;
+}
+
+/* ============================================================
+   SOLENNE — Product Page Custom Sections
+   ============================================================ */
+
+/* Specialist CTA button */
+.solenne-specialist-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  background-color: transparent;
+  color: var(--sol-charcoal);
+  border: 1px solid var(--sol-charcoal);
+  font-family: var(--sol-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--sol-radius-sm);
+  transition: background-color var(--sol-transition), color var(--sol-transition);
+  cursor: pointer;
+}
+
+.solenne-specialist-btn:hover {
+  background-color: var(--sol-charcoal);
+  color: var(--sol-ivory);
+}
+
+/* Benefits grid */
+.solenne-benefits {
+  background-color: var(--sol-ivory);
+  padding: 5rem 2rem;
+}
+
+.solenne-benefits__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.solenne-benefits__label {
+  font-family: var(--sol-font-body);
+  font-size: 0.68rem;
+  letter-spacing: var(--sol-letter-wider);
+  text-transform: uppercase;
+  color: var(--sol-champagne);
+  margin-bottom: 0.75rem;
+}
+
+.solenne-benefits__title {
+  font-family: var(--sol-font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--sol-charcoal);
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+.solenne-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 3rem;
+}
+
+@media (max-width: 768px) {
+  .solenne-benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .solenne-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.solenne-benefits__item-num {
+  font-family: var(--sol-font-heading);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--sol-warm-grey);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.solenne-benefits__item-title {
+  font-family: var(--sol-font-heading);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--sol-charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.solenne-benefits__item-text {
+  font-family: var(--sol-font-body);
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: var(--sol-mid-grey);
+}
+
+/* Specs table */
+.solenne-specs {
+  background-color: var(--sol-cream);
+  padding: 5rem 2rem;
+}
+
+.solenne-specs__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.solenne-specs__label {
+  font-family: var(--sol-font-body);
+  font-size: 0.68rem;
+  letter-spacing: var(--sol-letter-wider);
+  text-transform: uppercase;
+  color: var(--sol-champagne);
+  margin-bottom: 0.75rem;
+}
+
+.solenne-specs__title {
+  font-family: var(--sol-font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--sol-charcoal);
+  margin-bottom: 3rem;
+}
+
+.solenne-specs__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.solenne-specs__table tr {
+  border-bottom: 1px solid var(--sol-warm-grey);
+}
+
+.solenne-specs__table tr:first-child {
+  border-top: 1px solid var(--sol-warm-grey);
+}
+
+.solenne-specs__table td {
+  padding: 1rem 0;
+  font-family: var(--sol-font-body);
+  font-size: 0.82rem;
+  vertical-align: top;
+}
+
+.solenne-specs__table td:first-child {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--sol-charcoal);
+  width: 40%;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.solenne-specs__table td:last-child {
+  color: var(--sol-mid-grey);
+  line-height: 1.6;
+}
+
+/* Comparison section */
+.solenne-comparison {
+  background-color: var(--sol-ivory);
+  padding: 5rem 2rem;
+}
+
+.solenne-comparison__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.solenne-comparison__label {
+  font-family: var(--sol-font-body);
+  font-size: 0.68rem;
+  letter-spacing: var(--sol-letter-wider);
+  text-transform: uppercase;
+  color: var(--sol-champagne);
+  margin-bottom: 0.75rem;
+}
+
+.solenne-comparison__title {
+  font-family: var(--sol-font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--sol-charcoal);
+  margin-bottom: 3rem;
+}
+
+.solenne-comparison__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.solenne-comparison__table th {
+  padding: 1rem 1.5rem;
+  font-family: var(--sol-font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+  text-align: left;
+  background-color: var(--sol-charcoal);
+  color: var(--sol-ivory);
+}
+
+.solenne-comparison__table th:first-child {
+  border-radius: 0;
+}
+
+.solenne-comparison__table th.solenne-comparison__col--solenne {
+  background-color: var(--sol-champagne);
+  color: var(--sol-charcoal);
+}
+
+.solenne-comparison__table td {
+  padding: 0.9rem 1.5rem;
+  font-family: var(--sol-font-body);
+  font-size: 0.82rem;
+  color: var(--sol-charcoal);
+  border-bottom: 1px solid var(--sol-warm-grey);
+}
+
+.solenne-comparison__table tr:nth-child(even) td {
+  background-color: var(--sol-cream);
+}
+
+.solenne-comparison__table td.solenne-comparison__col--solenne {
+  font-weight: 500;
+}
+
+.solenne-check { color: #4a7c59; }
+.solenne-cross { color: #b05555; }
+
+/* Delivery section */
+.solenne-delivery {
+  background-color: var(--sol-charcoal);
+  color: var(--sol-ivory);
+  padding: 5rem 2rem;
+}
+
+.solenne-delivery__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .solenne-delivery__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.solenne-delivery__label {
+  font-family: var(--sol-font-body);
+  font-size: 0.68rem;
+  letter-spacing: var(--sol-letter-wider);
+  text-transform: uppercase;
+  color: var(--sol-champagne);
+  margin-bottom: 0.75rem;
+}
+
+.solenne-delivery__title {
+  font-family: var(--sol-font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.solenne-delivery__steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.solenne-delivery__step {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.solenne-delivery__step-num {
+  font-family: var(--sol-font-heading);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--sol-champagne);
+  line-height: 1;
+  min-width: 2rem;
+}
+
+.solenne-delivery__step-text strong {
+  display: block;
+  font-family: var(--sol-font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  color: var(--sol-ivory);
+}
+
+.solenne-delivery__step-text p {
+  font-family: var(--sol-font-body);
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--sol-warm-grey);
+  margin: 0;
+}
+
+.solenne-delivery__image-block {
+  background-color: #2a2a27;
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sol-mid-grey);
+  font-family: var(--sol-font-body);
+  font-size: 0.72rem;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+}
+
+/* Trust signals bar (product page) */
+.solenne-product-trust {
+  background-color: var(--sol-cream);
+  border-top: 1px solid var(--sol-warm-grey);
+  border-bottom: 1px solid var(--sol-warm-grey);
+  padding: 1.5rem 2rem;
+}
+
+.solenne-product-trust__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.solenne-product-trust__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sol-font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sol-charcoal);
+}
+
+/* FAQ section */
+.solenne-faq {
+  background-color: var(--sol-ivory);
+  padding: 5rem 2rem;
+}
+
+.solenne-faq__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.solenne-faq__label {
+  font-family: var(--sol-font-body);
+  font-size: 0.68rem;
+  letter-spacing: var(--sol-letter-wider);
+  text-transform: uppercase;
+  color: var(--sol-champagne);
+  margin-bottom: 0.75rem;
+}
+
+.solenne-faq__title {
+  font-family: var(--sol-font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--sol-charcoal);
+  margin-bottom: 3rem;
+}
+
+.solenne-faq__item {
+  border-bottom: 1px solid var(--sol-warm-grey);
+}
+
+.solenne-faq__item:first-of-type {
+  border-top: 1px solid var(--sol-warm-grey);
+}
+
+.solenne-faq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--sol-font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--sol-charcoal);
+  letter-spacing: 0.01em;
+}
+
+.solenne-faq__question::after {
+  content: '+';
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--sol-champagne);
+  transition: transform var(--sol-transition);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.solenne-faq__item.is-open .solenne-faq__question::after {
+  transform: rotate(45deg);
+}
+
+.solenne-faq__answer {
+  display: none;
+  padding: 0 0 1.25rem;
+  font-family: var(--sol-font-body);
+  font-size: 0.83rem;
+  line-height: 1.75;
+  color: var(--sol-mid-grey);
+  max-width: 640px;
+}
+
+.solenne-faq__item.is-open .solenne-faq__answer {
+  display: block;
+}
+
+/* Image placeholder blocks */
+.solenne-img-placeholder {
+  background-color: var(--sol-warm-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sol-mid-grey);
+  font-family: var(--sol-font-body);
+  font-size: 0.7rem;
+  letter-spacing: var(--sol-letter-wide);
+  text-transform: uppercase;
+}
