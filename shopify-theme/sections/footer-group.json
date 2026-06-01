@@ -1,30 +1,21 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "type": "footer",
   "name": "Footer",
   "sections": {
-    "footer_m9NzUG": {
+    "footer_main": {
       "type": "footer",
       "blocks": {
-        "group_H6VpwJ": {
+        "col_brand": {
           "type": "group",
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
+            "vertical_alignment": "flex-start",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 6,
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 16,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -53,21 +44,21 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "text_LWt8Pz": {
+            "brand_name": {
               "type": "text",
               "settings": {
-                "text": "<h2>Join our email list</h2>",
+                "text": "<p style=\"font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;text-transform:uppercase;color:#F7F4EF;\">Solenne</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4",
+                "type_preset": "paragraph",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "var(--color-foreground)",
+                "color": "#F7F4EF",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -78,21 +69,162 @@
               },
               "blocks": {}
             },
-            "text_f9CFLH": {
+            "brand_tagline": {
               "type": "text",
               "settings": {
-                "text": "<p>Get exclusive deals and early access to new products.</p>",
+                "text": "<p>Premium home wellness systems.<br>Engineered for recovery. Designed to last.</p>",
+                "width": "100%",
+                "max_width": "260px",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.78rem",
+                "line_height": "body-loose",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "#8A8580",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "email_signup": {
+              "type": "email-signup",
+              "settings": {
+                "width": "fill",
+                "custom_width": 100,
+                "inherit_color_scheme": true,
+                "heading": "",
+                "heading_preset": "h3",
+                "color_scheme": "",
+                "border_style": "bottom",
+                "border_width": 1,
+                "border_radius": 0,
+                "input_type_preset": "paragraph",
+                "style_class": "button-unstyled",
+                "display_type": "arrow",
+                "label": "Your email",
+                "integrated_button": true,
+                "button_type_preset": "paragraph",
+                "padding-block-start": 8,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["brand_name", "brand_tagline", "email_signup"]
+        },
+        "col_products": {
+          "type": "menu",
+          "settings": {
+            "menu": "main-menu",
+            "heading": "Products",
+            "heading_font": "var(--font-body--family)",
+            "heading_size": "0.7rem",
+            "heading_letter_spacing": "0.12em",
+            "heading_case": "uppercase",
+            "link_font": "var(--font-body--family)",
+            "link_size": "0.78rem",
+            "link_letter_spacing": "normal",
+            "link_case": "none",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "col_support": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "support_heading": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Support</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.7rem",
+                "line_height": "normal",
+                "letter_spacing": "0.12em",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "#F7F4EF",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 8,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "support_links": {
+              "type": "text",
+              "settings": {
+                "text": "<p><a href=\"/pages/contact\">Talk to a Specialist</a></p><p><a href=\"/pages/faq\">FAQ</a></p><p><a href=\"/pages/warranty\">Warranty</a></p><p><a href=\"/pages/delivery\">Delivery Info</a></p><p><a href=\"/pages/returns\">Returns</a></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
+                "font_size": "0.78rem",
+                "line_height": "body-loose",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "var(--color-foreground)",
+                "color": "#8A8580",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -104,78 +236,139 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "text_LWt8Pz",
-            "text_f9CFLH"
-          ]
+          "block_order": ["support_heading", "support_links"]
         },
-        "email_signup_crihX7": {
-          "type": "email-signup",
+        "col_company": {
+          "type": "group",
           "settings": {
-            "width": "fill",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
+            "width": "fit-content",
             "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
             "inherit_color_scheme": true,
-            "heading": "",
-            "heading_preset": "h3",
             "color_scheme": "",
-            "border_style": "all",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
             "border_width": 1,
-            "border_radius": 100,
-            "input_type_preset": "paragraph",
-            "style_class": "button-unstyled",
-            "display_type": "arrow",
-            "label": "Sign up",
-            "integrated_button": true,
-            "button_type_preset": "paragraph",
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
-          "blocks": {}
+          "blocks": {
+            "company_heading": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Company</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.7rem",
+                "line_height": "normal",
+                "letter_spacing": "0.12em",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "#F7F4EF",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 8,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "company_links": {
+              "type": "text",
+              "settings": {
+                "text": "<p><a href=\"/pages/about\">About Solenne</a></p><p><a href=\"/blogs/journal\">Journal</a></p><p><a href=\"/pages/contact\">Contact</a></p><p><a href=\"/pages/wholesale\">Commercial &amp; Wholesale</a></p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "0.78rem",
+                "line_height": "body-loose",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "#8A8580",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["company_heading", "company_links"]
         }
       },
-      "block_order": [
-        "group_H6VpwJ",
-        "email_signup_crihX7"
-      ],
-      "name": "t:names.footer",
+      "block_order": ["col_brand", "col_products", "col_support", "col_company"],
+      "name": "Footer",
       "settings": {
         "section_width": "page-width",
-        "gap": 20,
-        "color_scheme": "scheme-1",
-        "padding-block-start": 30,
-        "padding-block-end": 30
+        "gap": 48,
+        "color_scheme": "scheme-5",
+        "padding-block-start": 64,
+        "padding-block-end": 48
       }
     },
-    "footer_utilities_jLGE8U": {
+    "footer_utilities": {
       "type": "footer-utilities",
       "blocks": {
-        "footer_copyright_jweRK8": {
+        "copyright": {
           "type": "footer-copyright",
           "settings": {
-            "show_powered_by": true,
-            "font_size": "0.75rem",
+            "show_powered_by": false,
+            "font_size": "0.68rem",
             "case": "none"
           },
           "blocks": {}
         },
-        "footer_policy_list_VCdnpa": {
+        "policy_list": {
           "type": "footer-policy-list",
           "settings": {
-            "font_size": "0.75rem",
+            "font_size": "0.68rem",
             "case": "none"
           },
           "blocks": {}
         },
-        "social_links_Ew63Kq": {
+        "social_links": {
           "type": "social-links",
           "settings": {
-            "facebook_url": "https://www.facebook.com/",
+            "facebook_url": "",
             "instagram_url": "https://www.instagram.com/",
-            "youtube_url": "https://www.youtube.com/",
-            "tiktok_url": "https://www.tiktok.com/",
-            "twitter_url": "https://x.com/",
+            "youtube_url": "",
+            "tiktok_url": "",
+            "twitter_url": "",
             "threads_url": "",
             "linkedin_url": "",
             "bluesky_url": "",
@@ -188,24 +381,17 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "footer_copyright_jweRK8",
-        "footer_policy_list_VCdnpa",
-        "social_links_Ew63Kq"
-      ],
-      "name": "t:names.utilities",
+      "block_order": ["copyright", "policy_list", "social_links"],
+      "name": "Utilities",
       "settings": {
         "section_width": "page-width",
         "gap": 24,
-        "divider_thickness": 0,
-        "color_scheme": "",
+        "divider_thickness": 1,
+        "color_scheme": "scheme-5",
         "padding-block-start": 20,
-        "padding-block-end": 48
+        "padding-block-end": 32
       }
     }
   },
-  "order": [
-    "footer_m9NzUG",
-    "footer_utilities_jLGE8U"
-  ]
+  "order": ["footer_main", "footer_utilities"]
 }

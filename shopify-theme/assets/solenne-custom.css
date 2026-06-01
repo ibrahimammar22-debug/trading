@@ -779,3 +779,200 @@ nav[aria-label="Breadcrumb"] {
   letter-spacing: var(--sol-letter-wide);
   text-transform: uppercase;
 }
+
+/* ============================================================
+   SOLENNE — Phase 4: Header, Footer & Global Polish
+   ============================================================ */
+
+/* --- Transparent header on homepage --- */
+.shopify-section-group-header-group header-component[transparent] {
+  background-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+
+/* --- Sticky header scroll state --- */
+header-component[stuck] .header__wrapper,
+.header-section[data-stuck="true"] {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(247, 244, 239, 0.94) !important;
+  border-bottom: 1px solid var(--sol-warm-grey) !important;
+}
+
+/* --- Logo wordmark (text fallback until image is set) --- */
+.header__heading-link,
+.header__logo-link {
+  font-family: var(--sol-font-heading) !important;
+  font-size: 1.4rem !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: var(--sol-charcoal) !important;
+  text-decoration: none !important;
+}
+
+/* On transparent header the logo should be ivory */
+header-component[transparent] .header__heading-link,
+header-component[transparent] .header__logo-link {
+  color: var(--sol-ivory) !important;
+}
+
+/* --- Nav links uppercase micro --- */
+.header__menu-item > a,
+.header__active-menu-item > a {
+  font-family: var(--sol-font-body) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+}
+
+/* Nav hover underline instead of background highlight */
+.header__menu-item > a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: var(--sol-champagne);
+  transition: width 0.25s ease;
+  margin-top: 2px;
+}
+.header__menu-item > a:hover::after,
+.header__menu-item > a:focus::after {
+  width: 100%;
+}
+
+/* --- Cart icon --- */
+.cart-icon-bubble,
+.header__icon--cart {
+  color: var(--sol-charcoal) !important;
+}
+
+/* --- Footer link hover --- */
+.footer-content a:hover,
+footer a:hover {
+  color: var(--sol-champagne) !important;
+  text-decoration: none;
+}
+
+/* Footer email signup input */
+.footer .email-signup input,
+footer .email-signup input {
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(226, 221, 216, 0.4) !important;
+  color: var(--sol-ivory) !important;
+  font-family: var(--sol-font-body);
+  font-size: 0.78rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer .email-signup input::placeholder,
+footer .email-signup input::placeholder {
+  color: var(--sol-mid-grey) !important;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+/* Footer utilities bar (copyright/policy/social) */
+.footer-utilities,
+.shopify-section-group-footer-group .footer-utilities {
+  background-color: var(--sol-charcoal) !important;
+  border-top: 1px solid rgba(226, 221, 216, 0.15) !important;
+}
+
+.footer-utilities .footer-copyright,
+.footer-utilities a {
+  font-size: 0.68rem !important;
+  color: var(--sol-mid-grey) !important;
+  letter-spacing: 0.04em;
+}
+
+/* Social icons */
+.footer-utilities .social-links a svg {
+  color: var(--sol-mid-grey) !important;
+  transition: color var(--sol-transition);
+}
+.footer-utilities .social-links a:hover svg {
+  color: var(--sol-champagne) !important;
+}
+
+/* --- Cart drawer --- */
+.cart-drawer {
+  background-color: var(--sol-ivory) !important;
+}
+
+.cart-drawer__header {
+  border-bottom: 1px solid var(--sol-warm-grey) !important;
+  font-family: var(--sol-font-heading);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+/* --- Search modal --- */
+.search-modal {
+  background-color: var(--sol-ivory) !important;
+}
+
+.search-modal input {
+  font-family: var(--sol-font-body);
+  border-bottom: 1px solid var(--sol-warm-grey) !important;
+  background: transparent !important;
+}
+
+/* --- Mobile drawer menu --- */
+.header-drawer {
+  background-color: var(--sol-ivory) !important;
+}
+
+.header-drawer .header__menu-item a {
+  font-family: var(--sol-font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* --- Scrollbar (webkit) --- */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sol-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sol-warm-grey);
+  border-radius: 2px;
+}
+
+/* --- Page transitions --- */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: 200ms ease-in both fade-out;
+  }
+  ::view-transition-new(root) {
+    animation: 300ms ease-out 100ms both fade-in;
+  }
+  @keyframes fade-out { to { opacity: 0; } }
+  @keyframes fade-in { from { opacity: 0; } }
+}
+
+/* --- Collection page --- */
+.main-collection .section-header h1 {
+  font-family: var(--sol-font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--sol-charcoal);
+}
+
+/* --- 404 page --- */
+.main-404 h1 {
+  font-family: var(--sol-font-heading);
+  font-weight: 300;
+}
+
+/* --- Focus styles --- */
+:focus-visible {
+  outline: 1px solid var(--sol-champagne);
+  outline-offset: 3px;
+}
