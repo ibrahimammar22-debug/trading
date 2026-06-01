@@ -1,0 +1,200 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Solenne",
+    "theme_version": "1.0.0",
+    "theme_author": "Solenne",
+    "theme_documentation_url": "https://solenne.com",
+    "theme_support_url": "https://solenne.com/pages/contact"
+  },
+  {
+    "name": "Brand",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo Image",
+        "info": "Upload your logo. Recommended: SVG or PNG with transparent background, max 400px wide."
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon",
+        "info": "32×32px PNG recommended."
+      },
+      {
+        "type": "text",
+        "id": "brand_name",
+        "label": "Brand Name",
+        "default": "Solenne"
+      },
+      {
+        "type": "textarea",
+        "id": "brand_description",
+        "label": "Brand Description",
+        "default": "The world's finest cold plunge experience. Precision-engineered for the discerning individual."
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_bg",
+        "label": "Page Background",
+        "default": "#0a0a0a"
+      },
+      {
+        "type": "color",
+        "id": "color_text_primary",
+        "label": "Primary Text",
+        "default": "#f5f0e8"
+      },
+      {
+        "type": "color",
+        "id": "color_gold",
+        "label": "Gold Accent",
+        "default": "#c9a96e"
+      },
+      {
+        "type": "color",
+        "id": "color_cream",
+        "label": "Cream",
+        "default": "#f5f0e8"
+      },
+      {
+        "type": "color",
+        "id": "color_card_bg",
+        "label": "Card Background",
+        "default": "#141414"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "select",
+        "id": "heading_font",
+        "label": "Heading Font",
+        "default": "cormorant_garamond",
+        "options": [
+          { "value": "cormorant_garamond", "label": "Cormorant Garamond" },
+          { "value": "playfair_display",   "label": "Playfair Display" },
+          { "value": "libre_baskerville",  "label": "Libre Baskerville" }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "body_font",
+        "label": "Body Font",
+        "default": "inter",
+        "options": [
+          { "value": "inter",      "label": "Inter" },
+          { "value": "dm_sans",    "label": "DM Sans" },
+          { "value": "work_sans",  "label": "Work Sans" }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "body_font_size",
+        "label": "Body Font Size (px)",
+        "min": 14,
+        "max": 20,
+        "step": 1,
+        "default": 16,
+        "unit": "px"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "url",
+        "id": "social_instagram",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "url",
+        "id": "social_twitter",
+        "label": "X / Twitter URL"
+      },
+      {
+        "type": "url",
+        "id": "social_facebook",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "url",
+        "id": "social_youtube",
+        "label": "YouTube URL"
+      },
+      {
+        "type": "url",
+        "id": "social_linkedin",
+        "label": "LinkedIn URL"
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "header_transparent",
+        "label": "Transparent header on scroll top",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "header_logo_position",
+        "label": "Logo Position",
+        "default": "center",
+        "options": [
+          { "value": "left",   "label": "Left" },
+          { "value": "center", "label": "Center" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Animations",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_animations",
+        "label": "Enable scroll animations",
+        "default": true,
+        "info": "Respects user's reduced-motion settings."
+      },
+      {
+        "type": "range",
+        "id": "animation_duration",
+        "label": "Animation Duration (ms)",
+        "min": 400,
+        "max": 1200,
+        "step": 100,
+        "default": 900
+      }
+    ]
+  },
+  {
+    "name": "Checkout",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_financing",
+        "label": "Show financing note on product pages",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "financing_text",
+        "label": "Financing Note Text",
+        "default": "White-glove delivery & concierge installation included. Financing available."
+      }
+    ]
+  }
+]

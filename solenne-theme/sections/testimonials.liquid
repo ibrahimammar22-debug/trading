@@ -1,0 +1,195 @@
+<section class="testimonials" id="testimonials">
+  <div class="testimonials__header reveal-up">
+    <p class="section-eyebrow">{{ section.settings.eyebrow | default: 'Client Voices' }}</p>
+    <h2 class="section-title">{{ section.settings.title | default: 'An Experience That Speaks' }}</h2>
+  </div>
+
+  <div class="testimonials__grid">
+
+    <div class="testimonial-card reveal-up" style="--delay: 0ms">
+      <div class="testimonial-card__quote-mark" aria-hidden="true">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 24V14.4C0 6.4 4.8 1.6 14.4 0l1.6 2.4C10.4 3.6 7.6 6 7.2 9.6H12V24H0zm18 0V14.4C18 6.4 22.8 1.6 32.4 0L34 2.4C28.4 3.6 25.6 6 25.2 9.6H30V24H18z" fill="#c9a96e" fill-opacity="0.4"/>
+        </svg>
+      </div>
+      <blockquote class="testimonial-card__text">
+        "{{ section.settings.testimonial_1_text | default: 'The Solenne I transformed my morning ritual entirely. In thirty days, my inflammation markers dropped, my sleep deepened, and my clarity sharpened in ways I cannot attribute to anything else. This is not a product — it is an investment in yourself.' }}"
+      </blockquote>
+      <footer class="testimonial-card__author">
+        <div class="testimonial-card__author-info">
+          <cite class="testimonial-card__name">{{ section.settings.testimonial_1_name | default: 'Alexandra R.' }}</cite>
+          <span class="testimonial-card__title">{{ section.settings.testimonial_1_role | default: 'Founder, Meridian Capital' }}</span>
+        </div>
+        <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+          {%- for i in (1..5) -%}
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="#c9a96e" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7 1l1.54 3.12 3.44.5-2.49 2.43.59 3.42L7 8.77l-3.08 1.7.59-3.42L2.02 4.62l3.44-.5L7 1z"/>
+            </svg>
+          {%- endfor -%}
+        </div>
+      </footer>
+    </div>
+
+    <div class="testimonial-card reveal-up" style="--delay: 120ms">
+      <div class="testimonial-card__quote-mark" aria-hidden="true">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 24V14.4C0 6.4 4.8 1.6 14.4 0l1.6 2.4C10.4 3.6 7.6 6 7.2 9.6H12V24H0zm18 0V14.4C18 6.4 22.8 1.6 32.4 0L34 2.4C28.4 3.6 25.6 6 25.2 9.6H30V24H18z" fill="#c9a96e" fill-opacity="0.4"/>
+        </svg>
+      </div>
+      <blockquote class="testimonial-card__text">
+        "{{ section.settings.testimonial_2_text | default: 'I have used cold therapy systems costing a fraction of the Solenne I. The difference is not incremental — it is categorical. The silence of the compressor, the precision of the temperature, the quality of every surface you touch. I paid $15,000 and feel I received far more.' }}"
+      </blockquote>
+      <footer class="testimonial-card__author">
+        <div class="testimonial-card__author-info">
+          <cite class="testimonial-card__name">{{ section.settings.testimonial_2_name | default: 'Marcus T.' }}</cite>
+          <span class="testimonial-card__title">{{ section.settings.testimonial_2_role | default: 'Professional Athlete & Entrepreneur' }}</span>
+        </div>
+        <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+          {%- for i in (1..5) -%}
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="#c9a96e" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7 1l1.54 3.12 3.44.5-2.49 2.43.59 3.42L7 8.77l-3.08 1.7.59-3.42L2.02 4.62l3.44-.5L7 1z"/>
+            </svg>
+          {%- endfor -%}
+        </div>
+      </footer>
+    </div>
+
+    <div class="testimonial-card reveal-up" style="--delay: 240ms">
+      <div class="testimonial-card__quote-mark" aria-hidden="true">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 24V14.4C0 6.4 4.8 1.6 14.4 0l1.6 2.4C10.4 3.6 7.6 6 7.2 9.6H12V24H0zm18 0V14.4C18 6.4 22.8 1.6 32.4 0L34 2.4C28.4 3.6 25.6 6 25.2 9.6H30V24H18z" fill="#c9a96e" fill-opacity="0.4"/>
+        </svg>
+      </div>
+      <blockquote class="testimonial-card__text">
+        "{{ section.settings.testimonial_3_text | default: 'The installation team arrived precisely on schedule, treated our home with extraordinary care, and had the unit running within two hours. Six months later, I use it every single day. The Solenne I has become the most important object in my home.' }}"
+      </blockquote>
+      <footer class="testimonial-card__author">
+        <div class="testimonial-card__author-info">
+          <cite class="testimonial-card__name">{{ section.settings.testimonial_3_name | default: 'Dr. Isabelle M.' }}</cite>
+          <span class="testimonial-card__title">{{ section.settings.testimonial_3_role | default: 'Physician & Longevity Researcher' }}</span>
+        </div>
+        <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+          {%- for i in (1..5) -%}
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="#c9a96e" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7 1l1.54 3.12 3.44.5-2.49 2.43.59 3.42L7 8.77l-3.08 1.7.59-3.42L2.02 4.62l3.44-.5L7 1z"/>
+            </svg>
+          {%- endfor -%}
+        </div>
+      </footer>
+    </div>
+
+  </div>
+
+  <!-- Press Logos -->
+  <div class="press-logos reveal-up">
+    <p class="press-logos__label">{{ section.settings.press_label | default: 'As Seen In' }}</p>
+    <div class="press-logos__row">
+      <div class="press-logo">
+        <svg viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forbes" role="img">
+          <text x="4" y="28" font-family="Georgia, serif" font-size="28" font-weight="700" letter-spacing="-1" fill="currentColor">Forbes</text>
+        </svg>
+      </div>
+      <div class="press-logo">
+        <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="The Wall Street Journal" role="img">
+          <text x="4" y="26" font-family="Georgia, serif" font-size="13" font-weight="400" letter-spacing="0.5" fill="currentColor">THE WALL STREET JOURNAL</text>
+        </svg>
+      </div>
+      <div class="press-logo">
+        <svg viewBox="0 0 110 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Vogue" role="img">
+          <text x="4" y="28" font-family="Georgia, serif" font-size="28" font-weight="300" letter-spacing="4" fill="currentColor">VOGUE</text>
+        </svg>
+      </div>
+      <div class="press-logo">
+        <svg viewBox="0 0 150 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Architectural Digest" role="img">
+          <text x="4" y="22" font-family="Georgia, serif" font-size="11" font-weight="400" letter-spacing="2" fill="currentColor">ARCHITECTURAL DIGEST</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Section Eyebrow",
+      "default": "Client Voices"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "An Experience That Speaks"
+    },
+    {
+      "type": "textarea",
+      "id": "testimonial_1_text",
+      "label": "Testimonial 1 Text",
+      "default": "The Solenne I transformed my morning ritual entirely. In thirty days, my inflammation markers dropped, my sleep deepened, and my clarity sharpened in ways I cannot attribute to anything else. This is not a product — it is an investment in yourself."
+    },
+    {
+      "type": "text",
+      "id": "testimonial_1_name",
+      "label": "Testimonial 1 Name",
+      "default": "Alexandra R."
+    },
+    {
+      "type": "text",
+      "id": "testimonial_1_role",
+      "label": "Testimonial 1 Role",
+      "default": "Founder, Meridian Capital"
+    },
+    {
+      "type": "textarea",
+      "id": "testimonial_2_text",
+      "label": "Testimonial 2 Text",
+      "default": "I have used cold therapy systems costing a fraction of the Solenne I. The difference is not incremental — it is categorical. The silence of the compressor, the precision of the temperature, the quality of every surface you touch. I paid $15,000 and feel I received far more."
+    },
+    {
+      "type": "text",
+      "id": "testimonial_2_name",
+      "label": "Testimonial 2 Name",
+      "default": "Marcus T."
+    },
+    {
+      "type": "text",
+      "id": "testimonial_2_role",
+      "label": "Testimonial 2 Role",
+      "default": "Professional Athlete & Entrepreneur"
+    },
+    {
+      "type": "textarea",
+      "id": "testimonial_3_text",
+      "label": "Testimonial 3 Text",
+      "default": "The installation team arrived precisely on schedule, treated our home with extraordinary care, and had the unit running within two hours. Six months later, I use it every single day. The Solenne I has become the most important object in my home."
+    },
+    {
+      "type": "text",
+      "id": "testimonial_3_name",
+      "label": "Testimonial 3 Name",
+      "default": "Dr. Isabelle M."
+    },
+    {
+      "type": "text",
+      "id": "testimonial_3_role",
+      "label": "Testimonial 3 Role",
+      "default": "Physician & Longevity Researcher"
+    },
+    {
+      "type": "text",
+      "id": "press_label",
+      "label": "Press Section Label",
+      "default": "As Seen In"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials"
+    }
+  ]
+}
+{% endschema %}

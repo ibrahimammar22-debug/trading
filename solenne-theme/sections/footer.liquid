@@ -1,0 +1,177 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="footer__inner">
+
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="{{ routes.root_url }}" class="footer__logo" aria-label="{{ shop.name }}">
+          {%- if settings.logo -%}
+            <img src="{{ settings.logo | image_url: width: 180 }}" alt="{{ shop.name }}" width="120" loading="lazy">
+          {%- else -%}
+            <span class="footer__logo-text">{{ shop.name | upcase }}</span>
+          {%- endif -%}
+        </a>
+        <p class="footer__tagline">{{ section.settings.tagline | default: 'The world&rsquo;s finest cold plunge experience.' }}</p>
+        <div class="footer__social">
+          {%- if settings.social_instagram != blank -%}
+            <a href="{{ settings.social_instagram }}" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          {%- endif -%}
+          {%- if settings.social_twitter != blank -%}
+            <a href="{{ settings.social_twitter }}" class="footer__social-link" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          {%- endif -%}
+          {%- if settings.social_facebook != blank -%}
+            <a href="{{ settings.social_facebook }}" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          {%- endif -%}
+          {%- if settings.social_youtube != blank -%}
+            <a href="{{ settings.social_youtube }}" class="footer__social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+              </svg>
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-heading">{{ section.settings.col1_heading | default: 'Shop' }}</h4>
+          <ul class="footer__nav-list">
+            <li><a href="{{ routes.collections_url }}" class="footer__nav-link">All Products</a></li>
+            <li><a href="/collections/cold-plunge" class="footer__nav-link">Cold Plunge</a></li>
+            <li><a href="/collections/accessories" class="footer__nav-link">Accessories</a></li>
+            <li><a href="/pages/financing" class="footer__nav-link">Financing</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-heading">{{ section.settings.col2_heading | default: 'Company' }}</h4>
+          <ul class="footer__nav-list">
+            <li><a href="/pages/about" class="footer__nav-link">About Solenne</a></li>
+            <li><a href="/pages/experience" class="footer__nav-link">The Experience</a></li>
+            <li><a href="/blogs/journal" class="footer__nav-link">Journal</a></li>
+            <li><a href="/pages/press" class="footer__nav-link">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-heading">{{ section.settings.col3_heading | default: 'Support' }}</h4>
+          <ul class="footer__nav-list">
+            <li><a href="/pages/contact" class="footer__nav-link">Contact</a></li>
+            <li><a href="/pages/faq" class="footer__nav-link">FAQ</a></li>
+            <li><a href="/pages/warranty" class="footer__nav-link">Warranty</a></li>
+            <li><a href="/pages/installation" class="footer__nav-link">Installation</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="footer__newsletter">
+        <h4 class="footer__nav-heading">{{ section.settings.newsletter_heading | default: 'The Solenne Edit' }}</h4>
+        <p class="footer__newsletter-desc">{{ section.settings.newsletter_desc | default: 'Insights on recovery, longevity, and the art of living well.' }}</p>
+        {% form 'customer', id: 'footer-newsletter-form' %}
+          {%- if form.posted_successfully? -%}
+            <p class="footer__newsletter-success">Thank you for subscribing.</p>
+          {%- else -%}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <div class="footer__newsletter-form">
+              <input
+                type="email"
+                name="contact[email]"
+                id="footer-email"
+                class="footer__newsletter-input"
+                placeholder="{{ section.settings.newsletter_placeholder | default: 'Your email address' }}"
+                required
+                autocomplete="email"
+                aria-label="Email address"
+              >
+              <button type="submit" class="footer__newsletter-btn" aria-label="Subscribe">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          {%- endif -%}
+        {% endform %}
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">
+        &copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.
+      </p>
+      <nav class="footer__legal-nav" aria-label="Legal navigation">
+        <a href="{{ routes.root_url }}policies/privacy-policy" class="footer__legal-link">Privacy Policy</a>
+        <a href="{{ routes.root_url }}policies/terms-of-service" class="footer__legal-link">Terms of Service</a>
+        <a href="{{ routes.root_url }}policies/refund-policy" class="footer__legal-link">Returns</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Brand Tagline",
+      "default": "The world's finest cold plunge experience."
+    },
+    {
+      "type": "text",
+      "id": "col1_heading",
+      "label": "Column 1 Heading",
+      "default": "Shop"
+    },
+    {
+      "type": "text",
+      "id": "col2_heading",
+      "label": "Column 2 Heading",
+      "default": "Company"
+    },
+    {
+      "type": "text",
+      "id": "col3_heading",
+      "label": "Column 3 Heading",
+      "default": "Support"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "label": "Newsletter Heading",
+      "default": "The Solenne Edit"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_desc",
+      "label": "Newsletter Description",
+      "default": "Insights on recovery, longevity, and the art of living well."
+    },
+    {
+      "type": "text",
+      "id": "newsletter_placeholder",
+      "label": "Email Placeholder",
+      "default": "Your email address"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %}

@@ -1,117 +1,73 @@
-<section class="benefits reveal-section" id="Benefits">
-  <div class="benefits__inner container">
+<section class="benefits" id="benefits">
+  <div class="benefits__header reveal-up">
+    <p class="section-eyebrow">{{ section.settings.eyebrow | default: 'Engineered for Excellence' }}</p>
+    <h2 class="section-title">{{ section.settings.title | default: 'Built Without Compromise' }}</h2>
+    <p class="section-subtitle">{{ section.settings.subtitle | default: 'Every detail of the Solenne I has been crafted with one intent: to give you the most transformative cold therapy experience in existence.' }}</p>
+  </div>
 
-    <div class="benefits__header">
-      {% if section.settings.eyebrow != blank %}
-        <p class="section-eyebrow reveal-up">{{ section.settings.eyebrow }}</p>
-      {% endif %}
-      {% if section.settings.heading != blank %}
-        <h2 class="benefits__heading reveal-up" data-delay="100">{{ section.settings.heading }}</h2>
-      {% endif %}
-      {% if section.settings.subheading != blank %}
-        <p class="benefits__subheading reveal-up" data-delay="200">{{ section.settings.subheading }}</p>
-      {% endif %}
+  <div class="benefits__grid">
+
+    <!-- Benefit 1: Precision Temperature Control -->
+    <div class="benefit-card reveal-up" style="--delay: 0ms">
+      <div class="benefit-card__icon" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="19" stroke="#c9a96e" stroke-width="1"/>
+          <path d="M20 8v12M20 28v4" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M14 14l8.5 8.5" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="20" cy="24" r="3" stroke="#c9a96e" stroke-width="1.5"/>
+          <path d="M20 12v-2" stroke="#c9a96e" stroke-width="1" stroke-linecap="round"/>
+          <path d="M14 14l-1.4-1.4M26 14l1.4-1.4" stroke="#c9a96e" stroke-width="1" stroke-linecap="round"/>
+          <path d="M12 20H10M30 20h-2" stroke="#c9a96e" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="benefit-card__title">{{ section.settings.benefit_1_title | default: 'Precision Temperature Control' }}</h3>
+      <p class="benefit-card__description">{{ section.settings.benefit_1_desc | default: 'Dual-compressor chilling system maintains temperature within ±0.5°F. Set your target, the Solenne I does the rest — silently and without interruption.' }}</p>
     </div>
 
-    <div class="benefits__grid">
+    <!-- Benefit 2: Medical-Grade Filtration -->
+    <div class="benefit-card reveal-up" style="--delay: 100ms">
+      <div class="benefit-card__icon" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="19" stroke="#c9a96e" stroke-width="1"/>
+          <path d="M12 13h16l-2 6H14l-2-6z" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M14 19l1 8h10l1-8" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M17 22v4M20 22v4M23 22v4" stroke="#c9a96e" stroke-width="1" stroke-linecap="round"/>
+          <circle cx="20" cy="11" r="1.5" stroke="#c9a96e" stroke-width="1"/>
+          <path d="M20 12.5v0.5" stroke="#c9a96e" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="benefit-card__title">{{ section.settings.benefit_2_title | default: 'Medical-Grade Filtration' }}</h3>
+      <p class="benefit-card__description">{{ section.settings.benefit_2_desc | default: 'A five-stage UV and ozone purification system eliminates 99.9% of bacteria and pathogens — delivering spa-clean water that is as pure as your recovery ritual.' }}</p>
+    </div>
 
-      {% for block in section.blocks %}
-        {% if block.type == 'benefit' %}
-          <div class="benefit-card reveal-up" data-delay="{{ forloop.index | times: 100 }}" {{ block.shopify_attributes }}>
-            <div class="benefit-card__icon" aria-hidden="true">
-              {% case block.settings.icon %}
-                {% when 'temperature' %}
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/>
-                    <line x1="12" y1="9" x2="16" y2="9"/>
-                    <line x1="12" y1="6" x2="16" y2="6"/>
-                  </svg>
-                {% when 'filtration' %}
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
-                    <circle cx="19" cy="19" r="3"/>
-                    <line x1="17.5" y1="19" x2="20.5" y2="19"/>
-                    <line x1="19" y1="17.5" x2="19" y2="20.5"/>
-                  </svg>
-                {% when 'craftsmanship' %}
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    <polyline points="9 12 11 14 15 10"/>
-                  </svg>
-                {% when 'concierge' %}
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
-                    <circle cx="12" cy="6" r="1" fill="currentColor"/>
-                  </svg>
-                {% else %}
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-              {% endcase %}
-            </div>
+    <!-- Benefit 3: Lifetime Craftsmanship -->
+    <div class="benefit-card reveal-up" style="--delay: 200ms">
+      <div class="benefit-card__icon" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="19" stroke="#c9a96e" stroke-width="1"/>
+          <path d="M20 10l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6L15.1 25l.9-5.5-4-3.9 5.5-.8L20 10z" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M14 29l3-3M26 29l-3-3" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M17 31h6" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="benefit-card__title">{{ section.settings.benefit_3_title | default: 'Lifetime Craftsmanship' }}</h3>
+      <p class="benefit-card__description">{{ section.settings.benefit_3_desc | default: 'Handcrafted by master fabricators using 316L marine-grade stainless steel. Every weld, every finish, every edge is held to an exacting standard that outlasts a lifetime.' }}</p>
+    </div>
 
-            <div class="benefit-card__content">
-              <h3 class="benefit-card__title">{{ block.settings.title }}</h3>
-              <p class="benefit-card__description">{{ block.settings.description }}</p>
-            </div>
-          </div>
-        {% endif %}
-      {% else %}
-
-        <!-- Default benefit cards if no blocks configured -->
-        <div class="benefit-card reveal-up" data-delay="100">
-          <div class="benefit-card__icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/>
-            </svg>
-          </div>
-          <div class="benefit-card__content">
-            <h3 class="benefit-card__title">Precision Temperature Control</h3>
-            <p class="benefit-card__description">Maintain your ideal plunge temperature within ±0.5°F. Our proprietary chilling system responds in real time, ensuring a consistent therapeutic experience every session.</p>
-          </div>
-        </div>
-
-        <div class="benefit-card reveal-up" data-delay="200">
-          <div class="benefit-card__icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
-            </svg>
-          </div>
-          <div class="benefit-card__content">
-            <h3 class="benefit-card__title">Medical-Grade Filtration</h3>
-            <p class="benefit-card__description">A triple-stage UV filtration system eliminates 99.9% of pathogens, keeping your water pristine and reducing maintenance to near zero between sessions.</p>
-          </div>
-        </div>
-
-        <div class="benefit-card reveal-up" data-delay="300">
-          <div class="benefit-card__icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <polyline points="9 12 11 14 15 10"/>
-            </svg>
-          </div>
-          <div class="benefit-card__content">
-            <h3 class="benefit-card__title">Lifetime Craftsmanship</h3>
-            <p class="benefit-card__description">Every Solenne is hand-finished by master craftsmen in our Portland atelier. We back each unit with a lifetime structural warranty and unlimited service calls.</p>
-          </div>
-        </div>
-
-        <div class="benefit-card reveal-up" data-delay="400">
-          <div class="benefit-card__icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-          </div>
-          <div class="benefit-card__content">
-            <h3 class="benefit-card__title">Concierge Installation</h3>
-            <p class="benefit-card__description">A dedicated Solenne specialist manages your installation from site survey to first plunge. White-glove delivery, in-home setup, and a private onboarding session included.</p>
-          </div>
-        </div>
-
-      {% endfor %}
+    <!-- Benefit 4: Concierge Installation -->
+    <div class="benefit-card reveal-up" style="--delay: 300ms">
+      <div class="benefit-card__icon" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="19" stroke="#c9a96e" stroke-width="1"/>
+          <rect x="13" y="16" width="14" height="12" rx="2" stroke="#c9a96e" stroke-width="1.5"/>
+          <path d="M16 16v-3a4 4 0 0 1 8 0v3" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="20" cy="22" r="2" stroke="#c9a96e" stroke-width="1.5"/>
+          <path d="M20 24v2" stroke="#c9a96e" stroke-width="1" stroke-linecap="round"/>
+          <path d="M13 30h14" stroke="#c9a96e" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="benefit-card__title">{{ section.settings.benefit_4_title | default: 'Concierge Installation' }}</h3>
+      <p class="benefit-card__description">{{ section.settings.benefit_4_desc | default: 'A dedicated Solenne specialist arrives at your home, handles all plumbing and electrical, and ensures your unit is operating perfectly before departing. Your time is precious.' }}</p>
     </div>
 
   </div>
@@ -121,58 +77,72 @@
 {
   "name": "Benefits",
   "tag": "section",
-  "class": "section-benefits",
   "settings": [
     {
       "type": "text",
       "id": "eyebrow",
-      "label": "Eyebrow text",
-      "default": "Why Solenne"
+      "label": "Section Eyebrow",
+      "default": "Engineered for Excellence"
     },
     {
       "type": "text",
-      "id": "heading",
-      "label": "Section heading",
+      "id": "title",
+      "label": "Section Title",
       "default": "Built Without Compromise"
     },
     {
       "type": "textarea",
-      "id": "subheading",
-      "label": "Section subheading",
-      "default": "Every element of the Solenne I is engineered to a standard the wellness industry has never seen."
-    }
-  ],
-  "blocks": [
+      "id": "subtitle",
+      "label": "Section Subtitle",
+      "default": "Every detail of the Solenne I has been crafted with one intent: to give you the most transformative cold therapy experience in existence."
+    },
     {
-      "type": "benefit",
-      "name": "Benefit",
-      "settings": [
-        {
-          "type": "select",
-          "id": "icon",
-          "label": "Icon",
-          "options": [
-            { "value": "temperature", "label": "Temperature" },
-            { "value": "filtration", "label": "Filtration" },
-            { "value": "craftsmanship", "label": "Craftsmanship" },
-            { "value": "concierge", "label": "Concierge" },
-            { "value": "default", "label": "Default" }
-          ],
-          "default": "default"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Benefit title",
-          "default": "Feature Title"
-        },
-        {
-          "type": "textarea",
-          "id": "description",
-          "label": "Benefit description",
-          "default": "A concise description of this benefit in two meaningful sentences."
-        }
-      ]
+      "type": "text",
+      "id": "benefit_1_title",
+      "label": "Benefit 1 Title",
+      "default": "Precision Temperature Control"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_desc",
+      "label": "Benefit 1 Description",
+      "default": "Dual-compressor chilling system maintains temperature within ±0.5°F. Set your target, the Solenne I does the rest — silently and without interruption."
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_title",
+      "label": "Benefit 2 Title",
+      "default": "Medical-Grade Filtration"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_desc",
+      "label": "Benefit 2 Description",
+      "default": "A five-stage UV and ozone purification system eliminates 99.9% of bacteria and pathogens — delivering spa-clean water that is as pure as your recovery ritual."
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_title",
+      "label": "Benefit 3 Title",
+      "default": "Lifetime Craftsmanship"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_desc",
+      "label": "Benefit 3 Description",
+      "default": "Handcrafted by master fabricators using 316L marine-grade stainless steel. Every weld, every finish, every edge is held to an exacting standard that outlasts a lifetime."
+    },
+    {
+      "type": "text",
+      "id": "benefit_4_title",
+      "label": "Benefit 4 Title",
+      "default": "Concierge Installation"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_4_desc",
+      "label": "Benefit 4 Description",
+      "default": "A dedicated Solenne specialist arrives at your home, handles all plumbing and electrical, and ensures your unit is operating perfectly before departing. Your time is precious."
     }
   ],
   "presets": [

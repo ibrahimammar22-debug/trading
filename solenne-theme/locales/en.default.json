@@ -1,0 +1,187 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Enter using password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "Thank you! We will send you an email when the store opens.",
+      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link password-page__admin-link\">Log in here</a>",
+      "powered_by_html": "This shop will be powered by <a href=\"{shopify}\">{shopify}</a>"
+    },
+    "meta": {
+      "title_separator": " — ",
+      "search_page_title": "Search",
+      "page_not_found": "Page not found"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page_of": "Page {{ current_page }} of {{ total_pages }}"
+    },
+    "search": {
+      "placeholder": "Search",
+      "submit": "Search",
+      "results_count_zero": "No results for \"{{ terms }}\"",
+      "results_count_one": "1 result for \"{{ terms }}\"",
+      "results_count_other": "{{ count }} results for \"{{ terms }}\""
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "experience": "Experience",
+    "contact": "Contact",
+    "account": "Account",
+    "cart": "Cart",
+    "search": "Search"
+  },
+  "hero": {
+    "eyebrow": "Est. 2024",
+    "headline": "Redefine Recovery",
+    "subhead": "The world's finest cold plunge experience.",
+    "cta_primary": "Shop Solenne",
+    "cta_secondary": "Discover the Experience",
+    "scroll_label": "Scroll"
+  },
+  "product": {
+    "add_to_cart": "Add to Cart",
+    "sold_out": "Sold Out",
+    "unavailable": "Unavailable",
+    "view_details": "View Full Details",
+    "quantity": "Quantity",
+    "description": "Description",
+    "specifications": "Specifications",
+    "material": "Material",
+    "temperature_range": "Temperature Range",
+    "filtration": "Filtration",
+    "dimensions": "Dimensions",
+    "adding": "Adding...",
+    "added": "Added!",
+    "error_try_again": "Error — Try Again",
+    "from_price_html": "From <span>{{ price }}</span>",
+    "regular_price": "Regular price",
+    "sale_price": "Sale price",
+    "financing_note": "White-glove delivery & concierge installation included. Financing available."
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty.",
+    "continue_shopping": "Continue Shopping",
+    "item_count_one": "1 item",
+    "item_count_other": "{{ count }} items",
+    "subtotal": "Subtotal",
+    "checkout": "Proceed to Checkout",
+    "taxes_note": "Taxes and shipping calculated at checkout.",
+    "remove": "Remove",
+    "quantity": "Quantity"
+  },
+  "customer": {
+    "account": {
+      "title": "My Account",
+      "details": "Account Details",
+      "order_history": "Order History",
+      "logout": "Sign Out"
+    },
+    "login": {
+      "title": "Sign In",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "forgot_password": "Forgot your password?",
+      "no_account": "New to Solenne?",
+      "create_account": "Create Account"
+    },
+    "register": {
+      "title": "Create Account",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create Account",
+      "have_account": "Already have an account?",
+      "sign_in": "Sign In"
+    },
+    "recover_password": {
+      "title": "Reset Password",
+      "subtext": "We will send you an email to reset your password.",
+      "email": "Email",
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "reset_password": {
+      "title": "Reset Password",
+      "password": "New Password",
+      "password_confirm": "Confirm New Password",
+      "submit": "Reset Password"
+    },
+    "orders": {
+      "title": "Order History",
+      "order_number": "Order",
+      "date": "Date",
+      "payment_status": "Payment Status",
+      "fulfillment_status": "Fulfillment Status",
+      "total": "Total",
+      "none": "You have not placed any orders yet."
+    },
+    "addresses": {
+      "title": "Addresses",
+      "default": "Default",
+      "add": "Add a New Address",
+      "edit": "Edit Address",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "submit": "Save Address"
+    }
+  },
+  "benefits": {
+    "section_eyebrow": "Engineered for Excellence",
+    "section_title": "Built Without Compromise",
+    "precision_temp_title": "Precision Temperature Control",
+    "precision_temp_desc": "Dual-compressor chilling system maintains temperature within ±0.5°F. Set your target, the Solenne I does the rest — silently and without interruption.",
+    "filtration_title": "Medical-Grade Filtration",
+    "filtration_desc": "A five-stage UV and ozone purification system eliminates 99.9% of bacteria and pathogens — delivering spa-clean water that is as pure as your recovery ritual.",
+    "craftsmanship_title": "Lifetime Craftsmanship",
+    "craftsmanship_desc": "Handcrafted by master fabricators using 316L marine-grade stainless steel. Every weld, every finish, every edge is held to an exacting standard that outlasts a lifetime.",
+    "installation_title": "Concierge Installation",
+    "installation_desc": "A dedicated Solenne specialist arrives at your home, handles all plumbing and electrical, and ensures your unit is operating perfectly before departing. Your time is precious."
+  },
+  "testimonials": {
+    "section_eyebrow": "Client Voices",
+    "section_title": "An Experience That Speaks",
+    "press_label": "As Seen In"
+  },
+  "footer": {
+    "tagline": "The world's finest cold plunge experience.",
+    "shop_heading": "Shop",
+    "company_heading": "Company",
+    "support_heading": "Support",
+    "newsletter_heading": "The Solenne Edit",
+    "newsletter_desc": "Insights on recovery, longevity, and the art of living well.",
+    "newsletter_placeholder": "Your email address",
+    "newsletter_subscribe": "Subscribe",
+    "newsletter_success": "Thank you for subscribing.",
+    "copyright_html": "© {{ year }} {{ shop_name }}. All rights reserved.",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "returns": "Returns"
+  },
+  "errors": {
+    "not_found": "Page not found.",
+    "server": "Something went wrong. Please try again.",
+    "cart_error": "There was a problem adding this item to your cart."
+  },
+  "accessibility": {
+    "skip_to_content": "Skip to main content",
+    "close": "Close",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "loading": "Loading",
+    "search_results": "Search results",
+    "cart_icon_label": "Cart ({{ count }} items)",
+    "account_icon_label": "My account",
+    "search_icon_label": "Search"
+  }
+}
