@@ -1,12 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
     "main": {
       "type": "product-information",
@@ -18,20 +10,20 @@
             "media_presentation": "grid",
             "media_columns": "two",
             "image_gap": 4,
-            "large_first_image": false,
+            "large_first_image": true,
             "icons_style": "none",
             "slideshow_controls_style": "counter",
             "slideshow_mobile_controls_style": "dots",
-            "thumbnail_position": "right",
+            "thumbnail_position": "bottom",
             "thumbnail_width": 44,
             "aspect_ratio": "adapt",
             "constrain_to_viewport": true,
-            "media_fit": "contain",
+            "media_fit": "cover",
             "media_radius": 0,
             "extend_media": false,
             "zoom": true,
             "video_loop": false,
-            "hide_variants": true,
+            "hide_variants": false,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -49,7 +41,7 @@
             "custom_width_mobile": 100,
             "height": "fit",
             "details_position": "flex-start",
-            "gap": 28,
+            "gap": 24,
             "sticky_details_desktop": true,
             "inherit_color_scheme": true,
             "color_scheme": "scheme-1",
@@ -60,13 +52,39 @@
             "border_width": 1,
             "border_opacity": 100,
             "border_radius": 0,
-            "padding-block-start": 24,
-            "padding-block-end": 24,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {
-            "group_icgrde": {
+            "breadcrumb": {
+              "type": "text",
+              "name": "Breadcrumb",
+              "settings": {
+                "text": "<p><a href=\"/\">Home</a> &nbsp;/&nbsp; Cold Plunge Systems</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.7rem",
+                "line_height": "normal",
+                "letter_spacing": "0.06em",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "#8A8580",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 4,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "header_group": {
               "type": "group",
               "name": "Header",
               "settings": {
@@ -78,7 +96,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 8,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -104,7 +122,7 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_xrnftG": {
+                "product_title": {
                   "type": "text",
                   "name": "Product title",
                   "settings": {
@@ -112,14 +130,14 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h3",
+                    "type_preset": "h2",
                     "font": "var(--font-primary--family)",
                     "font_size": "",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
+                    "line_height": "display-tight",
+                    "letter_spacing": "heading-normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "color": "",
+                    "color": "#1C1C1A",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -130,7 +148,7 @@
                   },
                   "blocks": {}
                 },
-                "price_tVjtKg": {
+                "product_price": {
                   "type": "price",
                   "settings": {
                     "show_sale_price_first": true,
@@ -140,11 +158,11 @@
                     "width": "100%",
                     "alignment": "left",
                     "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "font_size": "1.1rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
-                    "color": "var(--color-foreground)",
+                    "color": "#1C1C1A",
                     "padding-block-start": 4,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
@@ -153,24 +171,47 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "text_xrnftG",
-                "price_tVjtKg"
-              ]
+              "block_order": ["product_title", "product_price"]
             },
-            "divider_VJhene": {
+            "delivery_note": {
+              "type": "text",
+              "name": "Delivery note",
+              "settings": {
+                "text": "<p>&#10003;&nbsp; Free white-glove delivery &nbsp;&nbsp;&#10003;&nbsp; 5-year warranty &nbsp;&nbsp;&#10003;&nbsp; U.S. specialist support</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.75rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "#4a7c59",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "divider_top": {
               "type": "_divider",
-              "name": "t:names.divider",
+              "name": "Divider",
               "settings": {
                 "thickness": 1,
                 "corner_radius": "square",
                 "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
+                "padding-block-start": 4,
+                "padding-block-end": 4
               },
               "blocks": {}
             },
-            "variant_picker_R3rGDr": {
+            "variant_picker": {
               "type": "variant-picker",
               "settings": {
                 "variant_style": "buttons",
@@ -183,7 +224,7 @@
               },
               "blocks": {}
             },
-            "buy_buttons_eYQEYi": {
+            "buy_buttons": {
               "type": "buy-buttons",
               "settings": {
                 "stacking": true,
@@ -194,12 +235,6 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "quantity": {
-                  "type": "quantity",
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                },
                 "add-to-cart": {
                   "type": "add-to-cart",
                   "static": true,
@@ -207,141 +242,26 @@
                     "style_class": "button"
                   },
                   "blocks": {}
-                },
-                "accelerated-checkout": {
-                  "type": "accelerated-checkout",
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
                 }
               },
-              "block_order": []
+              "block_order": ["add-to-cart"]
             },
-            "text_aEtTtq": {
+            "specialist_cta": {
               "type": "text",
-              "name": "Product description",
+              "name": "Specialist CTA",
               "settings": {
-                "text": "{{ closest.product.description }}",
+                "text": "<p><a href=\"/pages/contact\" class=\"solenne-specialist-btn\">&#9742;&nbsp; Talk to a Specialist</a></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "group_icgrde",
-            "divider_VJhene",
-            "variant_picker_R3rGDr",
-            "buy_buttons_eYQEYi",
-            "text_aEtTtq"
-          ]
-        }
-      },
-      "settings": {
-        "content_width": "content-center-aligned",
-        "desktop_media_position": "left",
-        "equal_columns": false,
-        "limit_details_width": false,
-        "gap": 48,
-        "color_scheme": "",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "product_recommendations_qggXJq": {
-      "type": "product-recommendations",
-      "blocks": {
-        "text_cbcgyb": {
-          "type": "text",
-          "name": "t:names.header",
-          "settings": {
-            "text": "<h3>You may also like </h3>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h4",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "static-product-card": {
-          "type": "_product-card",
-          "name": "t:names.product_card",
-          "static": true,
-          "settings": {
-            "product_card_gap": 8,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 8,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_card_gallery_DNizbJ": {
-              "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
-              "settings": {
-                "image_ratio": "adapt",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_title_M7MJkb": {
-              "type": "product-title",
-              "name": "t:names.product_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "paragraph",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "var(--color-foreground)",
+                "color": "#1C1C1A",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -352,22 +272,64 @@
               },
               "blocks": {}
             },
-            "price_gLWgA6": {
-              "type": "price",
+            "divider_mid": {
+              "type": "_divider",
+              "name": "Divider",
               "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h6",
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 4,
+                "padding-block-end": 4
+              },
+              "blocks": {}
+            },
+            "product_description": {
+              "type": "text",
+              "name": "Product description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
                 "width": "100%",
+                "max_width": "normal",
                 "alignment": "left",
+                "type_preset": "rte",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "0.88rem",
+                "line_height": "body-loose",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "#8A8580",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "mini_trust": {
+              "type": "text",
+              "name": "Mini trust row",
+              "settings": {
+                "text": "<p style=\"display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;color:#8A8580;\"><span>&#128274; Secure checkout</span><span>&#9986; 30-day return policy</span><span>&#128722; U.S. shipping only</span></p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.7rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
-                "color": "var(--color-foreground)",
-                "padding-block-start": 0,
+                "wrap": "pretty",
+                "color": "#8A8580",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -376,38 +338,235 @@
             }
           },
           "block_order": [
-            "product_card_gallery_DNizbJ",
-            "product_title_M7MJkb",
-            "price_gLWgA6"
+            "breadcrumb",
+            "header_group",
+            "delivery_note",
+            "divider_top",
+            "variant_picker",
+            "buy_buttons",
+            "specialist_cta",
+            "divider_mid",
+            "product_description",
+            "mini_trust"
           ]
         }
       },
-      "block_order": [
-        "text_cbcgyb"
-      ],
-      "name": "t:names.product_recommendations",
       "settings": {
-        "product": "{{ closest.product }}",
-        "recommendation_type": "related",
-        "layout_type": "grid",
-        "carousel_on_mobile": false,
-        "max_products": 4,
-        "columns": 4,
-        "mobile_columns": "2",
-        "columns_gap": 12,
-        "rows_gap": 24,
-        "icons_style": "arrow",
-        "icons_shape": "none",
-        "section_width": "page-width",
-        "gap": 28,
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": false,
+        "limit_details_width": true,
+        "gap": 64,
         "color_scheme": "scheme-1",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "product_trust_bar": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"solenne-product-trust\"><div class=\"solenne-product-trust__inner\"><div class=\"solenne-product-trust__item\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z\"/></svg><span>5-Year Warranty</span></div><div class=\"solenne-product-trust__item\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\"/></svg><span>White-Glove Delivery</span></div><div class=\"solenne-product-trust__item\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"/></svg><span>Certified Components</span></div><div class=\"solenne-product-trust__item\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z\"/></svg><span>Secure Checkout</span></div><div class=\"solenne-product-trust__item\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z\"/></svg><span>Specialist Support</span></div><div class=\"solenne-product-trust__item\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z\"/></svg><span>Ships to All 50 States</span></div></div></div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "benefits": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"solenne-benefits\"><div class=\"solenne-benefits__inner\"><p class=\"solenne-benefits__label\">Why Cold Immersion</p><h2 class=\"solenne-benefits__title\">Six ways your body transforms.</h2><div class=\"solenne-benefits__grid\"><div class=\"solenne-benefits__item\"><div class=\"solenne-benefits__item-num\">01</div><div class=\"solenne-benefits__item-title\">Accelerated Recovery</div><p class=\"solenne-benefits__item-text\">Cold water immersion drives blood away from muscles and back in warm surges — flushing lactic acid and metabolic waste up to 3x faster than rest alone.</p></div><div class=\"solenne-benefits__item\"><div class=\"solenne-benefits__item-num\">02</div><div class=\"solenne-benefits__item-title\">Reduced Inflammation</div><p class=\"solenne-benefits__item-text\">Sustained cold exposure lowers systemic inflammation markers. Athletes using cold immersion report significantly reduced DOMS (delayed onset muscle soreness) within 24 hours.</p></div><div class=\"solenne-benefits__item\"><div class=\"solenne-benefits__item-num\">03</div><div class=\"solenne-benefits__item-title\">Mental Clarity</div><p class=\"solenne-benefits__item-text\">Cold exposure triggers a norepinephrine release of up to 300%. The result: sharper focus, elevated mood, and a resilience that carries through the day.</p></div><div class=\"solenne-benefits__item\"><div class=\"solenne-benefits__item-num\">04</div><div class=\"solenne-benefits__item-title\">Deeper Sleep</div><p class=\"solenne-benefits__item-text\">Evening cold immersion accelerates core temperature drop — signalling the body to enter sleep mode faster and sustain deeper REM cycles through the night.</p></div><div class=\"solenne-benefits__item\"><div class=\"solenne-benefits__item-num\">05</div><div class=\"solenne-benefits__item-title\">Metabolic Activation</div><p class=\"solenne-benefits__item-text\">Cold stimulates brown adipose tissue (BAT) activation, increasing caloric burn and improving insulin sensitivity — benefits observed with as little as 11 minutes per week.</p></div><div class=\"solenne-benefits__item\"><div class=\"solenne-benefits__item-num\">06</div><div class=\"solenne-benefits__item-title\">Stress Resilience</div><p class=\"solenne-benefits__item-text\">Regular cold exposure is a form of hormetic stress — training your nervous system to modulate cortisol response and build a measurably calmer baseline under pressure.</p></div></div></div></div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "specs": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"solenne-specs\"><div class=\"solenne-specs__inner\"><p class=\"solenne-specs__label\">Technical Specifications</p><h2 class=\"solenne-specs__title\">Built to perform. Built to last.</h2><table class=\"solenne-specs__table\"><tbody><tr><td>Chiller Type</td><td>Commercial-grade compressor chiller (not Peltier / ice-based)</td></tr><tr><td>Temperature Range</td><td>37°F – 59°F (3°C – 15°C) — precise to ±0.5°F</td></tr><tr><td>Cooling Capacity</td><td>750W – 1,500W depending on configuration</td></tr><tr><td>Interior Dimensions</td><td>60\" L × 28\" W × 26\" D (fits up to 6'4\" user)</td></tr><tr><td>Water Capacity</td><td>Approx. 110 gallons (420 litres)</td></tr><tr><td>Interior Finish</td><td>316L marine-grade brushed stainless steel</td></tr><tr><td>Exterior Finish</td><td>Powder-coated steel with optional teak surround</td></tr><tr><td>Filtration System</td><td>UV + ozone dual-filtration — water stays clean 30–90 days</td></tr><tr><td>Noise Level</td><td>&lt; 52dB at 1m (equivalent to quiet office)</td></tr><tr><td>Power Requirements</td><td>110V / 15A standard outlet — no special wiring required</td></tr><tr><td>Weight (empty)</td><td>185 lbs (84 kg)</td></tr><tr><td>Weight (filled)</td><td>1,100 lbs (499 kg)</td></tr><tr><td>Warranty</td><td>5 years chiller · 2 years structural · 1 year electrical</td></tr><tr><td>Certifications</td><td>UL Listed · ETL Certified · FCC Compliant</td></tr><tr><td>Delivery</td><td>White-glove freight delivery — crated, room placement, unboxing</td></tr></tbody></table></div></div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "comparison": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"solenne-comparison\"><div class=\"solenne-comparison__inner\"><p class=\"solenne-comparison__label\">How We Compare</p><h2 class=\"solenne-comparison__title\">Not all cold plunges are equal.</h2><table class=\"solenne-comparison__table\"><thead><tr><th>Feature</th><th>Ice Bucket / DIY</th><th>Entry-Level Tub ($500–$2K)</th><th class=\"solenne-comparison__col--solenne\">Solenne System</th></tr></thead><tbody><tr><td>Temperature Control</td><td><span class=\"solenne-cross\">&#10005; Manual ice only</span></td><td><span class=\"solenne-cross\">&#10005; Inconsistent ±5–8°F</span></td><td class=\"solenne-comparison__col--solenne\"><span class=\"solenne-check\">&#10003; Precision ±0.5°F</span></td></tr><tr><td>Chiller Technology</td><td><span class=\"solenne-cross\">&#10005; None</span></td><td><span class=\"solenne-cross\">&#10005; Basic Peltier unit</span></td><td class=\"solenne-comparison__col--solenne\"><span class=\"solenne-check\">&#10003; Commercial compressor</span></td></tr><tr><td>Filtration System</td><td><span class=\"solenne-cross\">&#10005; None — change daily</span></td><td><span class=\"solenne-cross\">&#10005; Basic filter only</span></td><td class=\"solenne-comparison__col--solenne\"><span class=\"solenne-check\">&#10003; UV + ozone dual-filter</span></td></tr><tr><td>Build Material</td><td><span class=\"solenne-cross\">&#10005; Plastic / vinyl</span></td><td><span class=\"solenne-cross\">&#10005; Acrylic or ABS plastic</span></td><td class=\"solenne-comparison__col--solenne\"><span class=\"solenne-check\">&#10003; 316L stainless steel</span></td></tr><tr><td>Noise Level</td><td>&#8212; Silent</td><td><span class=\"solenne-cross\">&#10005; 65–75dB (loud)</span></td><td class=\"solenne-comparison__col--solenne\"><span class=\"solenne-check\">&#10003; &lt;52dB quiet operation</span></td></tr><tr><td>Delivery &amp; Setup</td><td>&#8212; Self-assembly</td><td><span class=\"solenne-cross\">&#10005; Parcel delivery only</span></td><td class=\"solenne-comparison__col--solenne\"><span class=\"solenne-check\">&#10003; White-glove freight</span></td></tr><tr><td>Warranty</td><td><span class=\"solenne-cross\">&#10005; None</span></td><td><span class=\"solenne-cross\">&#10005; 90 days to 1 year</span></td><td class=\"solenne-comparison__col--solenne\"><span class=\"solenne-check\">&#10003; 5-year comprehensive</span></td></tr><tr><td>Specialist Support</td><td><span class=\"solenne-cross\">&#10005; None</span></td><td><span class=\"solenne-cross\">&#10005; Email only</span></td><td class=\"solenne-comparison__col--solenne\"><span class=\"solenne-check\">&#10003; Dedicated U.S. team</span></td></tr></tbody></table></div></div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "delivery": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"solenne-delivery\"><div class=\"solenne-delivery__inner\"><div><p class=\"solenne-delivery__label\">White-Glove Delivery</p><h2 class=\"solenne-delivery__title\">From our warehouse to your home. Protected every step.</h2><ul class=\"solenne-delivery__steps\"><li class=\"solenne-delivery__step\"><div class=\"solenne-delivery__step-num\">01</div><div class=\"solenne-delivery__step-text\"><strong>Order Confirmed</strong><p>You receive a confirmation and a dedicated contact at Solenne within 24 hours. We answer every question before shipping.</p></div></li><li class=\"solenne-delivery__step\"><div class=\"solenne-delivery__step-num\">02</div><div class=\"solenne-delivery__step-text\"><strong>Quality Inspection</strong><p>Every system is pressure-tested and temperature-verified before being crated. We ship nothing we wouldn't put in our own home.</p></div></li><li class=\"solenne-delivery__step\"><div class=\"solenne-delivery__step-num\">03</div><div class=\"solenne-delivery__step-text\"><strong>Protected Freight Shipping</strong><p>Your system ships in a custom-built hardwood crate via insured freight carrier. Delivery timeline: 2–4 weeks to the contiguous U.S.</p></div></li><li class=\"solenne-delivery__step\"><div class=\"solenne-delivery__step-num\">04</div><div class=\"solenne-delivery__step-text\"><strong>Room-of-Choice Placement</strong><p>Our delivery partners bring the system to the exact room you specify — not just the driveway. Unboxing and debris removal included.</p></div></li><li class=\"solenne-delivery__step\"><div class=\"solenne-delivery__step-num\">05</div><div class=\"solenne-delivery__step-text\"><strong>Setup &amp; First Run</strong><p>Our specialist team walks you through setup, first fill, temperature calibration, and filtration schedule via phone or video call.</p></div></li></ul></div><div class=\"solenne-delivery__image-block solenne-img-placeholder\" style=\"aspect-ratio:4/5;\">[ Delivery / Crate Image ]</div></div></div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "product_faq": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"solenne-faq\"><div class=\"solenne-faq__inner\"><p class=\"solenne-faq__label\">Frequently Asked Questions</p><h2 class=\"solenne-faq__title\">Everything you need to know before you order.</h2><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">What is the delivery timeline to my address?</button><div class=\"solenne-faq__answer\">Delivery to the contiguous United States typically takes 2–4 weeks from order confirmation. Alaska and Hawaii may require additional lead time. We confirm exact timelines with you before shipping and provide full freight tracking once dispatched.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">What does white-glove delivery include exactly?</button><div class=\"solenne-faq__answer\">White-glove delivery means the freight carrier brings your system inside your home to the room of your choice. This includes unpacking, removal of all packaging materials, and basic positioning. It does not include plumbing connections, electrical work, or water fill — but our specialist team walks you through all of that via call or video after delivery.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">Does it require special electrical or plumbing installation?</button><div class=\"solenne-faq__answer\">No special electrical work is needed. The Solenne system runs on a standard 110V / 15A outlet — the same as a household appliance. For plumbing, you simply fill via a standard garden hose connection and drain through a floor drain or hose-to-drain. No permanent plumbing is required.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">How often does the water need to be changed?</button><div class=\"solenne-faq__answer\">With the dual UV + ozone filtration system running as designed, water typically remains clean for 30–90 days depending on frequency of use. We recommend a full drain-and-refill every 60 days for most home users. Adding a small amount of hydrogen peroxide between changes further extends water clarity.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">What temperature range does the chiller reach?</button><div class=\"solenne-faq__answer\">The Solenne chiller cools water from ambient temperature down to 37°F (3°C) and maintains any set point between 37°F and 59°F with ±0.5°F precision. Pre-cooling a full tank from room temperature (70°F) to 50°F takes approximately 3–5 hours depending on ambient conditions.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">How loud is the chiller during operation?</button><div class=\"solenne-faq__answer\">The Solenne chiller operates at under 52dB at one metre — roughly equivalent to a quiet office or refrigerator hum. It is designed specifically for home use and will not disrupt a room where it's installed. Maintenance cycles are brief and infrequent.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">What warranty is included?</button><div class=\"solenne-faq__answer\">Every Solenne system includes: 5-year warranty on the chiller unit, 2-year warranty on structural and interior components, and 1-year warranty on all electrical parts. Warranty claims are handled directly by our U.S.-based specialist team. We do not use third-party warranty processors.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">What happens if the unit is damaged during shipping?</button><div class=\"solenne-faq__answer\">All Solenne systems ship fully insured. If any damage occurs in transit, you are fully protected. Do not refuse delivery — instead, note the damage on the delivery receipt and contact us within 48 hours with photos. We will arrange replacement of any damaged components at no cost to you.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">Can I return the product if it's not right for me?</button><div class=\"solenne-faq__answer\">We offer a 30-day return window. Because of the size and freight nature of the product, return shipping costs are the buyer's responsibility. The unit must be in original condition and drained before collection. We strongly encourage speaking with our specialist team before ordering to ensure the system is the right fit for your space and goals.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">Is the tub suitable for outdoor installation?</button><div class=\"solenne-faq__answer\">Yes. The Solenne system is rated for both indoor and outdoor use. For outdoor installations, we recommend placing it under a covered area to protect the chiller unit from direct rain and prolonged sun exposure. The 316L stainless interior is fully corrosion-resistant. Optional teak surround panels are available for outdoor aesthetics.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">Do you offer financing?</button><div class=\"solenne-faq__answer\">Yes. We work with a financing partner to offer qualified buyers 0% APR plans and extended payment terms. Contact our specialist team before checkout to discuss options. We can usually confirm financing eligibility within one business day.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">Is this suitable for a commercial gym or recovery studio?</button><div class=\"solenne-faq__answer\">Absolutely. Many of our customers are recovery studios, athletic facilities, and boutique gyms. For commercial use cases we recommend the larger configuration and can provide volume pricing and dedicated installation support. Contact our team to discuss commercial orders.</div></div></div></div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "product_bottom_cta": {
+      "type": "hero",
+      "blocks": {
+        "label": {
+          "type": "text",
+          "name": "Label",
+          "settings": {
+            "text": "<p>Still have questions?</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.68rem",
+            "line_height": "normal",
+            "letter_spacing": "0.14em",
+            "case": "uppercase",
+            "wrap": "pretty",
+            "color": "#C9B99A",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 12,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "headline": {
+          "type": "text",
+          "name": "Headline",
+          "settings": {
+            "text": "<h2>Speak with a Solenne specialist before you order.</h2>",
+            "width": "fit-content",
+            "max_width": "640px",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "display-tight",
+            "letter_spacing": "heading-normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#F7F4EF",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 12,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "subtext": {
+          "type": "text",
+          "name": "Subtext",
+          "settings": {
+            "text": "<p>We'll help you choose the right configuration, discuss delivery logistics, and answer every question — no sales pressure, just honest guidance.</p>",
+            "width": "fit-content",
+            "max_width": "500px",
+            "alignment": "center",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.88rem",
+            "line_height": "body-loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#E2DDD8",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "cta": {
+          "type": "button",
+          "name": "CTA",
+          "settings": {
+            "label": "Talk to a Specialist",
+            "link": "/pages/contact",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["label", "headline", "subtext", "cta"],
+      "name": "Bottom CTA",
+      "settings": {
+        "media_type_1": "image",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "medium",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#14141299",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 80,
+        "padding-block-end": 80
       }
     }
   },
   "order": [
     "main",
-    "product_recommendations_qggXJq"
+    "product_trust_bar",
+    "benefits",
+    "specs",
+    "comparison",
+    "delivery",
+    "product_faq",
+    "product_bottom_cta"
   ]
 }
