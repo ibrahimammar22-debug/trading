@@ -1,48 +1,107 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
-    "hero_jVaWmY": {
+    "hero_solenne": {
       "type": "hero",
       "blocks": {
-        "text_YLPk4p": {
+        "eyebrow": {
           "type": "text",
-          "name": "t:names.heading",
+          "name": "Eyebrow",
           "settings": {
-            "text": "<p>Browse our latest products</p>",
+            "text": "<p>Premium Cold Immersion Systems</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h2",
+            "type_preset": "paragraph",
             "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "font_size": "0.72rem",
             "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
+            "letter_spacing": "0.14em",
+            "case": "uppercase",
             "wrap": "pretty",
-            "color": "var(--color-foreground-heading)",
+            "color": "#C9B99A",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 8,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {}
         },
-        "button_H9gpTf": {
-          "type": "button",
-          "name": "t:names.button",
+        "headline": {
+          "type": "text",
+          "name": "Headline",
           "settings": {
-            "label": "Shop all",
+            "text": "<h1>Where recovery\nbecomes ritual.</h1>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "display-tight",
+            "letter_spacing": "heading-normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#F7F4EF",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 16,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "subtext": {
+          "type": "text",
+          "name": "Subtext",
+          "settings": {
+            "text": "<p>Precision-engineered cold plunge systems for the home, studio, and performance athlete.</p>",
+            "width": "fit-content",
+            "max_width": "400px",
+            "alignment": "left",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.9rem",
+            "line_height": "body-loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#E2DDD8",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 28,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "cta_primary": {
+          "type": "button",
+          "name": "Primary CTA",
+          "settings": {
+            "label": "Explore the Collection",
             "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        },
+        "cta_secondary": {
+          "type": "button",
+          "name": "Secondary CTA",
+          "settings": {
+            "label": "Talk to a Specialist",
+            "link": "/pages/contact",
             "open_in_new_tab": false,
             "style_class": "button-secondary",
             "width": "fit-content",
@@ -53,11 +112,8 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "text_YLPk4p",
-        "button_H9gpTf"
-      ],
-      "name": "t:names.hero",
+      "block_order": ["eyebrow", "headline", "subtext", "cta_primary", "cta_secondary"],
+      "name": "Hero",
       "settings": {
         "media_type_1": "image",
         "media_type_2": "image",
@@ -68,53 +124,59 @@
         "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
+        "horizontal_alignment": "flex-start",
         "vertical_alignment": "flex-end",
-        "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 24,
-        "section_width": "page-width",
-        "section_height": "medium",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "large",
         "section_height_custom": 50,
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
-        "overlay_color": "#12121266",
-        "overlay_style": "solid",
-        "gradient_direction": "to bottom",
+        "overlay_color": "#1C1C1A99",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 75,
-        "padding-block-start": 100,
-        "padding-block-end": 72
+        "padding-block-start": 80,
+        "padding-block-end": 80
       }
     },
-    "product_list_fa6P9H": {
-      "type": "product-list",
+
+    "trust_bar": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"solenne-trust-bar\"><div class=\"solenne-trust-bar__inner\"><div class=\"solenne-trust-bar__item\"><svg class=\"solenne-trust-bar__icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z\"/></svg><span>5-Year Warranty</span></div><div class=\"solenne-trust-bar__item\"><svg class=\"solenne-trust-bar__icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\"/></svg><span>White-Glove Delivery</span></div><div class=\"solenne-trust-bar__item\"><svg class=\"solenne-trust-bar__icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z\"/></svg><span>Secure Checkout</span></div><div class=\"solenne-trust-bar__item\"><svg class=\"solenne-trust-bar__icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg><span>Ships to All 50 States</span></div><div class=\"solenne-trust-bar__item\"><svg class=\"solenne-trust-bar__icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z\"/></svg><span>Specialist Support</span></div></div></div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "philosophy": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"solenne-philosophy\"><p class=\"solenne-philosophy__label\">The Solenne Difference</p><h2 class=\"solenne-philosophy__headline\">Engineered for those who demand more from their recovery.</h2><div class=\"solenne-philosophy__pillars\"><div class=\"solenne-philosophy__pillar\"><p class=\"solenne-philosophy__pillar-name\">Recovery</p><p class=\"solenne-philosophy__pillar-desc\">Reduce inflammation, flush metabolic waste, and wake muscles faster than any ice bucket can.</p></div><div class=\"solenne-philosophy__pillar\"><p class=\"solenne-philosophy__pillar-name\">Resilience</p><p class=\"solenne-philosophy__pillar-desc\">Cold exposure trains the nervous system. Sharper focus, deeper sleep, and a body that adapts.</p></div><div class=\"solenne-philosophy__pillar\"><p class=\"solenne-philosophy__pillar-name\">Ritual</p><p class=\"solenne-philosophy__pillar-desc\">Not a chore. A practice. Designed to make precision recovery a beautiful part of your daily life.</p></div></div></div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "featured_product_strip": {
+      "type": "media-with-content",
       "blocks": {
-        "static-header": {
-          "type": "_product-list-content",
-          "name": "t:names.header",
+        "media": {
+          "type": "_media-without-appearance",
+          "id": "media",
           "static": true,
           "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": false,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
+            "media_type": "image",
+            "video_loop": false,
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -124,26 +186,45 @@
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "id": "content",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "padding-block-start": 60,
+            "padding-block-end": 60,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48
+          },
           "blocks": {
-            "product_list_text_YFtzcL": {
-              "type": "_product-list-text",
-              "name": "t:names.collection_title",
+            "eyebrow": {
+              "type": "text",
               "settings": {
-                "text": "<h3>{{ closest.collection.title }}</h3>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
+                "text": "<p>Featured System</p>",
+                "type_preset": "paragraph",
                 "font": "var(--font-body--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
+                "font_size": "0.68rem",
+                "letter_spacing": "0.14em",
+                "case": "uppercase",
+                "color": "#C9B99A",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "line_height": "normal",
+                "wrap": "pretty",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -151,34 +232,223 @@
               },
               "blocks": {}
             },
-            "product_list_button_MWeP9V": {
-              "type": "_product-list-button",
-              "name": "t:names.product_list_button",
+            "title": {
+              "type": "text",
               "settings": {
-                "label": "View all",
+                "text": "<h2>The Solenne Cold Plunge System</h2>",
+                "type_preset": "h2",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "letter_spacing": "heading-normal",
+                "case": "none",
+                "color": "#1C1C1A",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "line_height": "display-tight",
+                "wrap": "pretty",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "desc": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Hospital-grade chiller. Brushed stainless finish. Whisper-quiet operation at any temperature between 37°F and 59°F. Built for the home, refined for a lifetime.</p>",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.9rem",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "#8A8580",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "line_height": "body-loose",
+                "wrap": "pretty",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_note": {
+              "type": "text",
+              "settings": {
+                "text": "<p>From $8,995 — Free white-glove delivery in the contiguous U.S.</p>",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.78rem",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "#1C1C1A",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "line_height": "normal",
+                "wrap": "pretty",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "cta": {
+              "type": "button",
+              "settings": {
+                "label": "View Product",
+                "link": "shopify://collections/all",
                 "open_in_new_tab": false,
-                "style_class": "link",
+                "style_class": "button",
                 "width": "fit-content",
                 "custom_width": 100,
-                "width_mobile": "fit-content",
+                "width_mobile": "fill",
                 "custom_width_mobile": 100
               },
               "blocks": {}
             }
           },
-          "block_order": [
-            "product_list_text_YFtzcL",
-            "product_list_button_MWeP9V"
-          ]
+          "block_order": ["eyebrow", "title", "desc", "price_note", "cta"]
+        }
+      },
+      "block_order": ["media", "content"],
+      "name": "Featured Product",
+      "settings": {
+        "media_position": "left",
+        "media_width": "wide",
+        "media_height": "80svh",
+        "extend_media": false,
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "marquee_strip": {
+      "type": "marquee",
+      "blocks": {
+        "item1": {
+          "type": "_marquee",
+          "settings": {
+            "text": "5-Year Warranty",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.72rem",
+            "letter_spacing": "0.12em",
+            "case": "uppercase",
+            "color": "#C9B99A",
+            "icon_name": "none",
+            "icon_width": 20,
+            "icon_color": "#C9B99A"
+          },
+          "blocks": {}
         },
-        "static-product-card": {
-          "type": "_product-card",
-          "name": "t:names.product_card",
+        "item2": {
+          "type": "_marquee",
+          "settings": {
+            "text": "White-Glove Delivery",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.72rem",
+            "letter_spacing": "0.12em",
+            "case": "uppercase",
+            "color": "#C9B99A",
+            "icon_name": "none",
+            "icon_width": 20,
+            "icon_color": "#C9B99A"
+          },
+          "blocks": {}
+        },
+        "item3": {
+          "type": "_marquee",
+          "settings": {
+            "text": "Precision-Engineered Chiller",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.72rem",
+            "letter_spacing": "0.12em",
+            "case": "uppercase",
+            "color": "#C9B99A",
+            "icon_name": "none",
+            "icon_width": 20,
+            "icon_color": "#C9B99A"
+          },
+          "blocks": {}
+        },
+        "item4": {
+          "type": "_marquee",
+          "settings": {
+            "text": "Ships to All 50 States",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.72rem",
+            "letter_spacing": "0.12em",
+            "case": "uppercase",
+            "color": "#C9B99A",
+            "icon_name": "none",
+            "icon_width": 20,
+            "icon_color": "#C9B99A"
+          },
+          "blocks": {}
+        },
+        "item5": {
+          "type": "_marquee",
+          "settings": {
+            "text": "Specialist Support Included",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.72rem",
+            "letter_spacing": "0.12em",
+            "case": "uppercase",
+            "color": "#C9B99A",
+            "icon_name": "none",
+            "icon_width": 20,
+            "icon_color": "#C9B99A"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["item1", "item2", "item3", "item4", "item5"],
+      "name": "Marquee",
+      "settings": {
+        "speed": 40,
+        "pause_on_hover": true,
+        "direction": "left",
+        "color_scheme": "scheme-5",
+        "padding-block-start": 20,
+        "padding-block-end": 20
+      }
+    },
+
+    "lifestyle_split": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "id": "media",
           "static": true,
           "settings": {
-            "product_card_gap": 4,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
+            "media_type": "image",
+            "video_loop": false,
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -188,103 +458,261 @@
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "id": "content",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "padding-block-start": 60,
+            "padding-block-end": 60,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48
+          },
           "blocks": {
-            "product_card_gallery_677WP3": {
-              "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
+            "label": {
+              "type": "text",
               "settings": {
-                "image_ratio": "adapt",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_title_YXxMTj": {
-              "type": "product-title",
-              "name": "t:names.product_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
+                "text": "<p>Designed for the Home</p>",
+                "type_preset": "paragraph",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
+                "font_size": "0.68rem",
+                "letter_spacing": "0.14em",
+                "case": "uppercase",
+                "color": "#C9B99A",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 4,
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "line_height": "normal",
+                "wrap": "pretty",
+                "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
               "blocks": {}
             },
-            "price_JQzVV4": {
-              "type": "price",
-              "name": "t:names.product_price",
+            "heading": {
+              "type": "text",
               "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h6",
-                "width": "100%",
-                "alignment": "left",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
+                "text": "<h2>Performance-grade technology. Spa-level experience.</h2>",
+                "type_preset": "h2",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "letter_spacing": "heading-normal",
                 "case": "none",
-                "color": "var(--color-foreground)",
+                "color": "#F7F4EF",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "line_height": "display-tight",
+                "wrap": "pretty",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "body": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Every Solenne system is built to sit elegantly in a home environment — quiet, clean, and precise. No industrial noise. No plastic finish. Just engineered calm.</p>",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.9rem",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "#E2DDD8",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "line_height": "body-loose",
+                "wrap": "pretty",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "cta": {
+              "type": "button",
+              "settings": {
+                "label": "Shop Now",
+                "link": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style_class": "button-secondary",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100
               },
               "blocks": {}
             }
           },
-          "block_order": [
-            "product_card_gallery_677WP3",
-            "product_title_YXxMTj",
-            "price_JQzVV4"
-          ]
+          "block_order": ["label", "heading", "body", "cta"]
         }
       },
-      "name": "Featured collection",
+      "block_order": ["media", "content"],
+      "name": "Lifestyle Split",
       "settings": {
-        "collection": "all",
-        "layout_type": "grid",
-        "carousel_on_mobile": false,
-        "max_products": 8,
-        "columns": 4,
-        "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 8,
-        "rows_gap": 24,
-        "icons_style": "arrow",
-        "icons_shape": "none",
+        "media_position": "right",
+        "media_width": "wide",
+        "media_height": "80svh",
+        "extend_media": false,
         "section_width": "page-width",
-        "horizontal_alignment": "flex-start",
-        "gap": 28,
-        "color_scheme": "scheme-1",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "color_scheme": "scheme-5",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "homepage_faq": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"solenne-faq\"><div class=\"solenne-faq__inner\"><p class=\"solenne-faq__label\">Common Questions</p><h2 class=\"solenne-faq__title\">Everything you need to know.</h2><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">What makes Solenne different from other cold plunges? <span></span></button><div class=\"solenne-faq__answer\">Solenne systems use a hospital-grade compressor chiller — not just ice or a basic heat exchanger. This means consistent temperatures at the exact degree you set, without constant re-icing or monitoring. Combined with brushed stainless interiors, quiet operation, and a designed aesthetic, it's a fundamentally different product.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">How long does delivery take? <span></span></button><div class=\"solenne-faq__answer\">Delivery to the contiguous U.S. typically takes 2–4 weeks from order confirmation. Your system ships via freight carrier in a protective crate with white-glove delivery included — meaning delivery to the room of your choice, unboxing, and basic setup.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">What warranty does the Solenne system come with? <span></span></button><div class=\"solenne-faq__answer\">All Solenne systems include a 5-year comprehensive warranty on the chiller unit and a 2-year warranty on structural components. Our specialist support team is available Monday–Saturday to assist with any questions after delivery.</div></div><div class=\"solenne-faq__item\"><button class=\"solenne-faq__question\" onclick=\"this.closest('.solenne-faq__item').classList.toggle('is-open')\">Is financing available? <span></span></button><div class=\"solenne-faq__answer\">Yes. We offer financing options through our partner starting at 0% APR for qualified buyers. Contact our specialist team to discuss payment plans that fit your situation.</div></div></div></div>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+
+    "footer_cta": {
+      "type": "hero",
+      "blocks": {
+        "label": {
+          "type": "text",
+          "name": "Label",
+          "settings": {
+            "text": "<p>Solenne — Premium Wellness Systems</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.68rem",
+            "line_height": "normal",
+            "letter_spacing": "0.14em",
+            "case": "uppercase",
+            "wrap": "pretty",
+            "color": "#C9B99A",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 12,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "headline": {
+          "type": "text",
+          "name": "Headline",
+          "settings": {
+            "text": "<h2>Ready to invest in your recovery?</h2>",
+            "width": "fit-content",
+            "max_width": "700px",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "display-tight",
+            "letter_spacing": "heading-normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#F7F4EF",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "cta": {
+          "type": "button",
+          "name": "CTA",
+          "settings": {
+            "label": "Talk to a Specialist",
+            "link": "/pages/contact",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["label", "headline", "cta"],
+      "name": "Footer CTA",
+      "settings": {
+        "media_type_1": "image",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "medium",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#14141299",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 80,
+        "padding-block-end": 80
       }
     }
   },
   "order": [
-    "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "hero_solenne",
+    "trust_bar",
+    "philosophy",
+    "featured_product_strip",
+    "marquee_strip",
+    "lifestyle_split",
+    "homepage_faq",
+    "footer_cta"
   ]
 }
